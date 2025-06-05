@@ -56,6 +56,94 @@ interface CherryPointSystem {
   isInSpringState: boolean;
 }
 
+// Stage progression interfaces
+interface StageConfig {
+  关卡类型: string;
+  关卡号: string;
+  关卡名称: string;
+  背景音乐ID: string;
+  BOSS名称: string;
+}
+
+interface MapBackgroundConfig {
+  关卡号: string;
+  主背景: string;
+  前景元素: string;
+  滚动速度: string;
+  环境效果: string;
+  特殊装饰: string;
+}
+
+interface MapBoundaryConfig {
+  关卡号: string;
+  游戏区域宽度: string;
+  游戏区域高度: string;
+  玩家移动边界左: string;
+  玩家移动边界右: string;
+  玩家移动边界上: string;
+  玩家移动边界下: string;
+}
+
+interface EnemyConfig {
+  关卡号: string;
+  敌机类型: string;
+  出现时机: string;
+  HP: number;
+  移动模式: string;
+  弹幕类型: string;
+}
+
+interface BossConfig {
+  BOSS名称: string;
+  关卡号: string;
+  通常攻击阶段数: number;
+  符卡数量: number;
+  总HP: number;
+}
+
+interface SpecialAreaConfig {
+  关卡号: string;
+  特殊区域类型: string;
+  位置坐标: string;
+  触发效果: string;
+  持续时间: string;
+}
+
+interface PlayerPosition {
+  x: number;
+  y: number;
+}
+
+interface MapState {
+  scrollSpeed: number;
+  scrollPosition: number;
+  isPaused: boolean;
+  backgroundLoaded: boolean;
+  environmentEffects: string[];
+  specialDecorations: string[];
+}
+
+interface BossState {
+  name: string;
+  currentHP: number;
+  maxHP: number;
+  phase: 'normal_attack' | 'spell_card' | 'transition';
+  currentPhase: number;
+  maxPhases: number;
+  spellCards: number;
+  isMoving: boolean;
+}
+
+interface StageProgress {
+  currentStage: string;
+  difficulty: string;
+  enemiesDefeated: number;
+  totalEnemies: number;
+  allEnemiesDefeated: boolean;
+  bossActive: boolean;
+  stageCompleted: boolean;
+}
+
 export interface ICustomWorld extends World {
   gameState: {
     selectedCharacter?: string;
@@ -91,6 +179,26 @@ export interface ICustomWorld extends World {
     cherryPointConfigs?: CherryPointConfig[];
     cherryPointSystem?: CherryPointSystem;
     lifeBonus?: boolean;
+    
+    // Stage progression system
+    stageConfigs?: StageConfig[];
+    mapBackgroundConfigs?: MapBackgroundConfig[];
+    mapBoundaryConfigs?: MapBoundaryConfig[];
+    enemyConfigs?: EnemyConfig[];
+    bossConfigs?: BossConfig[];
+    specialAreaConfigs?: SpecialAreaConfig[];
+    
+    // Game state for stage progression
+    playerPosition?: PlayerPosition;
+    mapState?: MapState;
+    bossState?: BossState;
+    stageProgress?: StageProgress;
+    specialAreaEffects?: Record<string, any>;
+    clearStatistics?: {
+      defeatedEnemies: number;
+      grazedBullets: number;
+      collectedCherryPoints: number;
+    };
     
     [key: string]: any;
   };
