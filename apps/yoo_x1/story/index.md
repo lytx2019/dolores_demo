@@ -55,7 +55,7 @@ Feature: 角色选择
 
   Rule: 返回标题 — 允许玩家取消选择返回主菜单
     Scenario: 放弃选择返回标题
-      When 玩家在角色选择界面按下“返回”
+      When 玩家在角色选择界面按下"返回"
       Then 系统返回标题界面
 ```
 
@@ -83,7 +83,7 @@ Feature: 难度选择
     Scenario: 选择未解锁的 Lunatic 难度
       Given 玩家尚未通关 Hard 难度
       When 玩家尝试选择 Lunatic 难度
-      Then 系统提示 “难度未解锁”
+      Then 系统提示 "难度未解锁"
       And 保持难度选择界面
 
     Scenario: 成功解锁 Lunatic 并选择
@@ -152,6 +152,15 @@ Feature: 弹幕射击
       | 参数     | 值  |
       | 擦弹距离 | 3px |
       | 擦弹分数 | 500 |
+    And 系统已定义「碰撞判定配置表」:
+      | 参数           | 值    |
+      | 玩家hitbox半径 | 2px   |
+      | 敌机hitbox半径 | 8px   |
+      | 弹幕hitbox半径 | 4px   |
+    And 系统已定义「游戏结束条件配置表」:
+      | 条件     | 值  |
+      | 初始残机 | 3   |
+      | 初始Bomb | 3   |
 
   Rule: 移动模式切换 — Shift键切换高低速
     Scenario Outline: 模式切换与射击
@@ -171,6 +180,78 @@ Feature: 弹幕射击
       When 没有发生碰撞
       Then 系统记录一次擦弹
       And 给予 500 分基础分数
+
+  Rule: 敌机碰撞判定 — 玩家与敌机或弹幕接触判定
+    Scenario Outline: 碰撞判定检测
+      Given 玩家位于坐标 (100, 200)
+      And 敌机位于坐标 <敌机坐标>
+      When 计算两者中心距离
+      Then 判定结果为 <是否碰撞>
+
+      Examples:
+        | 敌机坐标    | 是否碰撞 |
+        | (100, 210) | 是       |
+        | (105, 205) | 是       |
+        | (112, 212) | 否       |
+
+    Scenario: 弹幕碰撞判定
+      Given 玩家 hitbox 半径为 2px
+      And 弹幕 hitbox 半径为 4px
+      When 玩家中心与弹幕中心距离 ≤ 6px
+      Then 判定为碰撞
+      And 触发玩家Miss状态
+
+  Rule: 游戏结束判定 — 残机耗尽或主动退出
+    Scenario: 残机耗尽游戏结束
+      Given 当前残机数为 0
+      When 玩家发生碰撞触发Miss
+      Then 播放游戏结束音效
+      And 显示 "Game Over" 画面
+      And 记录最终得分到排行榜
+
+    Scenario: 主动退出游戏
+      Given 游戏进行中
+      When 玩家按下ESC键选择退出
+      Then 暂停游戏显示退出确认对话框
+      And 选择确认后返回标题画面
+
+    Scenario: 通关游戏结束
+      Given 玩家完成最后一个关卡
+      When BOSS被击败且关卡结算完成
+      Then 播放通关音效
+      And 显示Ending画面
+      And 解锁相应难度成就
+
+  Rule: 敌机击毁判定 — 累计伤害达到HP上限
+    Scenario Outline: 敌机生命值系统
+      Given 敌机类型为 <敌机类型> HP为 <初始HP>
+      When 玩家射击命中造成 <伤害值> 点伤害
+      Then 敌机剩余HP为 <剩余HP>
+      And 击毁状态为 <是否击毁>
+
+      Examples:
+        | 敌机类型 | 初始HP | 伤害值 | 剩余HP | 是否击毁 |
+        | 小妖精   | 10     | 5      | 5      | 否       |
+        | 小妖精   | 10     | 10     | 0      | 是       |
+        | 中妖精   | 50     | 30     | 20     | 否       |
+        | 大妖精   | 100    | 100    | 0      | 是       |
+
+    Scenario: 敌机击毁奖励
+      Given 敌机被击毁
+      When 击毁动画播放完成
+      Then 在敌机位置生成得分道具
+      And 播放击毁音效
+      And 根据敌机类型给予对应分数
+
+    Scenario: BOSS击毁特殊处理
+      Given BOSS类型敌机HP归零
+      When 非符卡阶段被击毁
+      Then 进入下一个攻击阶段或符卡
+      And 播放阶段转换动画
+      
+      But 符卡阶段被击毁
+      Then 符卡宣告结束
+      And 判定符卡完成奖励
 ```
 
 ### 3.5 Feature: Stage Progression / 关卡流程
@@ -180,10 +261,39 @@ Feature: 关卡流程
 
   Background:
     Given 系统已定义「关卡配置表」:
-      | 难度  | 关卡号 | 背景音乐ID |
-      | Easy  | 1      | BGM_E_1    |
-      | Normal| 3      | BGM_N_3    |
-      | Hard  | 6      | BGM_H_6    |
+      | 关卡类型 | 关卡号 | 关卡名称           | 背景音乐ID     | BOSS名称               |
+      | 主关卡   | 1      | 雪与樱的故乡       | BGM_S1         | 琪露诺                 |
+      | 主关卡   | 2      | 无人的厅堂         | BGM_S2         | 蕾迪·霍瓦特洛克       |
+      | 主关卡   | 3      | 白玉楼的阶梯       | BGM_S3         | 爱丽丝·玛格特洛依德   |
+      | 主关卡   | 4      | 樱花的幻想         | BGM_S4         | 普莉兹姆利巴三姐妹   |
+      | 主关卡   | 5      | 墨染的樱花         | BGM_S5         | 魂魄妖梦               |
+      | 主关卡   | 6      | 冥界之旅           | BGM_S6         | 西行寺幽幽子           |
+      | Extra    | EX     | 紫色的海           | BGM_EX         | 八云蓝                 |
+      | Phantasm | PH     | 境界之間           | BGM_PH         | 八云紫                 |
+    And 系统已定义「普通敌机配置表」:
+      | 关卡号 | 敌机类型     | 出现时机   | HP  | 移动模式   | 弹幕类型     |
+      | 1      | 雪妖精       | 开场       | 15  | 直线       | 单发弹       |
+      | 1      | 冰妖精       | 中期       | 25  | 波浪       | 散射弹       |
+      | 2      | 寒气妖精     | 开场       | 20  | 螺旋       | 冰晶弹       |
+      | 2      | 雪女仆       | 中期       | 35  | 追踪       | 扇形弹       |
+      | 3      | 人偶兵       | 开场       | 30  | 编队       | 直线弹       |
+      | 3      | 魔法人偶     | 中期       | 45  | 瞬移       | 魔力弹       |
+      | 4      | 春妖精       | 开场       | 25  | 飞舞       | 花瓣弹       |
+      | 4      | 骚灵        | 中期       | 40  | 漂浮       | 音符弹       |
+      | 5      | 幽灵        | 开场       | 35  | 穿墙       | 灵力弹       |
+      | 5      | 半灵        | 中期       | 50  | 分身       | 剑气弹       |
+      | 6      | 死灵        | 开场       | 45  | 群聚       | 蝶弹         |
+      | 6      | 亡灵蝶      | 后期       | 60  | 环绕       | 死亡弹       |
+    And 系统已定义「BOSS配置表」:
+      | BOSS名称             | 关卡号 | 通常攻击阶段数 | 符卡数量 | 总HP    |
+      | 琪露诺               | 1      | 2              | 2        | 1500    |
+      | 蕾迪·霍瓦特洛克     | 2      | 3              | 3        | 2200    |
+      | 爱丽丝·玛格特洛依德 | 3      | 3              | 4        | 2800    |
+      | 普莉兹姆利巴三姐妹 | 4      | 4              | 5        | 3500    |
+      | 魂魄妖梦             | 5      | 4              | 6        | 4200    |
+      | 西行寺幽幽子         | 6      | 5              | 7        | 5000    |
+      | 八云蓝               | EX     | 6              | 8        | 6000    |
+      | 八云紫               | PH     | 7              | 9        | 8000    |
 
   Rule: 关卡加载 — 根据难度和编号初始化资源
     Scenario Outline: 关卡启动
@@ -191,18 +301,81 @@ Feature: 关卡流程
       When 关卡编号为 <关卡号> 加载完成
       Then 播放对应的关卡背景音乐
       And 显示关卡标题与BOSS剪影
+      And 加载该关卡的普通敌机配置
 
       Examples:
-        | 难度  | 关卡号 |
-        | Easy  | 1 |
-        | Normal| 3 |
-        | Hard  | 6 |
+        | 难度    | 关卡号 |
+        | Easy    | 1      |
+        | Normal  | 3      |
+        | Hard    | 6      |
+        | Lunatic | EX     |
+
+  Rule: 普通敌机生成规则 — 按时机和配置生成敌机
+    Scenario Outline: 普通敌机出现
+      Given 关卡 <关卡号> 已开始
+      When 到达 <出现时机> 阶段
+      Then 生成 <敌机类型> 敌机
+      And 敌机HP设置为 <HP>
+      And 敌机采用 <移动模式> 移动方式
+      And 敌机发射 <弹幕类型>
+
+      Examples:
+        | 关卡号 | 出现时机 | 敌机类型 | HP | 移动模式 | 弹幕类型 |
+        | 1      | 开场     | 雪妖精   | 15 | 直线     | 单发弹   |
+        | 3      | 中期     | 魔法人偶 | 45 | 瞬移     | 魔力弹   |
+        | 5      | 后期     | 半灵     | 50 | 分身     | 剑气弹   |
+
+  Rule: BOSS战触发规则 — 普通敌机清理完毕后进入BOSS战
+    Scenario Outline: BOSS战开始
+      Given 关卡 <关卡号> 的普通敌机已全部击败
+      When BOSS <BOSS名称> 登场
+      Then 播放BOSS登场动画
+      And 显示BOSS名称与立绘
+      And 初始化BOSS HP为 <总HP>
+      And 开始第一个通常攻击阶段
+
+      Examples:
+        | 关卡号 | BOSS名称             | 总HP |
+        | 1      | 琪露诺               | 1500 |
+        | 3      | 爱丽丝·玛格特洛依德 | 2800 |
+        | 6      | 西行寺幽幽子         | 5000 |
+        | EX     | 八云蓝               | 6000 |
+
+  Rule: BOSS阶段进程 — 通常攻击与符卡交替进行
+    Scenario: BOSS攻击阶段转换
+      Given BOSS当前处于通常攻击阶段
+      When BOSS当前阶段HP耗尽
+      Then 进入对应的符卡宣言阶段
+      And 暂停BOSS移动
+      And 清除屏幕上的弹幕
+
+    Scenario: 符卡阶段结束转换
+      Given BOSS当前处于符卡阶段
+      When 符卡被击破或时间耗尽
+      Then 进入下一个通常攻击阶段
+      And 恢复BOSS正常移动模式
+      And 重置弹幕发射模式
 
   Rule: 关卡结算 — BOSS击破后展示评分
     Scenario: 关卡完结与评分结算
-      When BOSS HP 归零或时间耗尽
+      When BOSS总HP归零且所有阶段完成
       Then 播放通关音效
       And 显示评分结算面板
+      And 统计击破敌机数、擦弹数、收集樱点数
+      And 解锁下一关卡（如有）
+
+  Rule: 特殊关卡解锁 — Extra和Phantasm的解锁条件
+    Scenario: Extra关卡解锁
+      Given 玩家在Normal难度以上通关Stage6
+      And 未使用Continue
+      When 返回标题画面
+      Then Extra关卡选项变为可选
+
+    Scenario: Phantasm关卡解锁
+      Given 玩家已通关Extra关卡
+      And 在Extra关卡中收集所有特殊道具
+      When 返回标题画面
+      Then Phantasm关卡选项变为可选
 ```
 
 ### 3.6 Feature: Boss Encounter & Spell Card / BOSS 战与符卡
@@ -232,7 +405,7 @@ Feature: BOSS 战与符卡
     Scenario: 完美符卡击破
       Given BOSS 当前符卡剩余时间 > 0
       When 玩家在无Miss无Bomb情况下击破符卡
-      Then 获得 “符卡奖励” 标识
+      Then 获得 "符卡奖励" 标识
       And 追加 200000 分
 
   Rule: 符卡失败规则 — Miss或Bomb取消奖励
