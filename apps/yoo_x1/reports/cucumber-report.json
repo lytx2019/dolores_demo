@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 215666
+              "duration": 207124
             }
           },
           {
@@ -98,7 +98,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 109208
+              "duration": 112333
             }
           }
         ],
@@ -117,7 +117,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 172374
+              "duration": 239000
             }
           },
           {
@@ -201,7 +201,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 146207
+              "duration": 111166
             }
           }
         ],
@@ -220,7 +220,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 115374
+              "duration": 93334
             }
           },
           {
@@ -304,7 +304,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 193082
+              "duration": 188165
             }
           }
         ],
@@ -323,7 +323,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 158041
+              "duration": 138791
             }
           },
           {
@@ -387,7 +387,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 154375
+              "duration": 151999
             }
           }
         ],
@@ -417,7 +417,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 159374
+              "duration": 102083
             }
           },
           {
@@ -498,7 +498,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5073082
+              "duration": 4987583
             }
           },
           {
@@ -542,7 +542,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 203457
+              "duration": 195624
             }
           }
         ],
@@ -561,7 +561,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 197625
+              "duration": 173624
             }
           },
           {
@@ -642,7 +642,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 181958
+              "duration": 186332
             }
           },
           {
@@ -686,7 +686,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 65457
+              "duration": 77500
             }
           }
         ],
@@ -705,7 +705,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 218750
+              "duration": 152041
             }
           },
           {
@@ -786,7 +786,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 88334
+              "duration": 65750
             }
           },
           {
@@ -830,7 +830,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 96542
+              "duration": 66291
             }
           }
         ],
@@ -849,7 +849,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 179666
+              "duration": 158957
             }
           },
           {
@@ -930,7 +930,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 170958
+              "duration": 156625
             }
           },
           {
@@ -974,7 +974,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56667
+              "duration": 57500
             }
           }
         ],
@@ -993,7 +993,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 162916
+              "duration": 132708
             }
           },
           {
@@ -1074,7 +1074,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 74542
+              "duration": 59082
             }
           },
           {
@@ -1118,7 +1118,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 66250
+              "duration": 80708
             }
           }
         ],
@@ -1137,7 +1137,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 185667
+              "duration": 163915
             }
           },
           {
@@ -1218,7 +1218,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 67667
+              "duration": 68291
             }
           },
           {
@@ -1262,7 +1262,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 130000
+              "duration": 126458
             }
           }
         ],
@@ -1281,7 +1281,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 69582
+              "duration": 74041
             }
           },
           {
@@ -1362,7 +1362,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 58875
+              "duration": 59124
             }
           },
           {
@@ -1375,7 +1375,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 409165
+              "duration": 360792
             }
           },
           {
@@ -1388,7 +1388,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 642209
+              "duration": 669000
             }
           },
           {
@@ -1396,7 +1396,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 60542
+              "duration": 66209
             }
           }
         ],
@@ -1426,7 +1426,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56874
+              "duration": 82707
             }
           },
           {
@@ -1459,9 +1459,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「樱点系统配置表」:",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 466249
             }
           },
           {
@@ -1469,9 +1472,12 @@
             "keyword": "Given ",
             "line": 12,
             "name": "当前樱计量为 49500",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:49"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 804584
             }
           },
           {
@@ -1479,9 +1485,12 @@
             "keyword": "When ",
             "line": 13,
             "name": "玩家收集了 600 个樱点",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:70"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 594166
             }
           },
           {
@@ -1489,9 +1498,12 @@
             "keyword": "Then ",
             "line": 14,
             "name": "樱计量应为 100",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:104"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 356167
             }
           },
           {
@@ -1509,7 +1521,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 44915
+              "duration": 57791
             }
           }
         ],
@@ -1528,7 +1540,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 67041
+              "duration": 142875
             }
           },
           {
@@ -1561,9 +1573,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「樱点系统配置表」:",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 65124
             }
           },
           {
@@ -1571,9 +1586,12 @@
             "keyword": "Given ",
             "line": 12,
             "name": "当前樱计量为 40000",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:49"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 93042
             }
           },
           {
@@ -1581,9 +1599,12 @@
             "keyword": "When ",
             "line": 13,
             "name": "玩家收集了 12000 个樱点",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:70"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 100708
             }
           },
           {
@@ -1591,9 +1612,12 @@
             "keyword": "Then ",
             "line": 14,
             "name": "樱计量应为 2000",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:104"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 83500
             }
           },
           {
@@ -1611,7 +1635,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 178959
+              "duration": 54082
             }
           }
         ],
@@ -1630,7 +1654,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 58249
+              "duration": 61500
             }
           },
           {
@@ -1663,9 +1687,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「樱点系统配置表」:",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 121582
             }
           },
           {
@@ -1673,9 +1700,12 @@
             "keyword": "Given ",
             "line": 12,
             "name": "当前樱计量为 0",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:49"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 40709
             }
           },
           {
@@ -1683,9 +1713,12 @@
             "keyword": "When ",
             "line": 13,
             "name": "玩家收集了 51000 个樱点",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:70"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 66124
             }
           },
           {
@@ -1693,9 +1726,12 @@
             "keyword": "Then ",
             "line": 14,
             "name": "樱计量应为 1000",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:104"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 43624
             }
           },
           {
@@ -1713,7 +1749,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45207
+              "duration": 41749
             }
           }
         ],
@@ -1732,7 +1768,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 69541
+              "duration": 36125
             }
           },
           {
@@ -1765,9 +1801,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「樱点系统配置表」:",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 40124
             }
           },
           {
@@ -1775,9 +1814,12 @@
             "keyword": "Given ",
             "line": 26,
             "name": "已累计获得 3 次春度状态",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:125"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 100332
             }
           },
           {
@@ -1785,9 +1827,12 @@
             "keyword": "When ",
             "line": 27,
             "name": "再次进入春度状态",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:145"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 30957
             }
           },
           {
@@ -1795,9 +1840,13 @@
             "keyword": "Then ",
             "line": 28,
             "name": "玩家增加 1 残机",
+            "match": {
+              "location": "tests/step-definitions/cherry-point-system.steps.ts:164"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "failed",
+              "duration": 145416,
+              "error_message": "AssertionError: expected undefined to be true\n    at CustomWorld.<anonymous> (/Users/bytedance/Projects/lytx2019/dolores_demo/apps/yoo_x1/tests/step-definitions/cherry-point-system.steps.ts:165:41)"
             }
           },
           {
@@ -1805,7 +1854,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47833
+              "duration": 64291
             }
           }
         ],
@@ -1835,7 +1884,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 69458
+              "duration": 47332
             }
           },
           {
@@ -2027,7 +2076,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 49790
+              "duration": 43250
             }
           }
         ],
@@ -2046,7 +2095,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 129166
+              "duration": 42083
             }
           },
           {
@@ -2238,7 +2287,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 94500
+              "duration": 37291
             }
           }
         ],
@@ -2257,7 +2306,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 52958
+              "duration": 43334
             }
           },
           {
@@ -2449,7 +2498,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 40709
+              "duration": 50042
             }
           }
         ],
@@ -2468,7 +2517,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50084
+              "duration": 59958
             }
           },
           {
@@ -2660,7 +2709,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 38291
+              "duration": 46249
             }
           }
         ],
@@ -2679,7 +2728,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 67041
+              "duration": 52499
             }
           },
           {
@@ -2871,7 +2920,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 42665
+              "duration": 52165
             }
           }
         ],
@@ -2890,7 +2939,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 52291
+              "duration": 45249
             }
           },
           {
@@ -3082,7 +3131,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 41208
+              "duration": 35084
             }
           }
         ],
@@ -3101,7 +3150,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 44167
+              "duration": 60750
             }
           },
           {
@@ -3303,7 +3352,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 38874
+              "duration": 36625
             }
           }
         ],
@@ -3322,7 +3371,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47292
+              "duration": 44457
             }
           },
           {
@@ -3524,7 +3573,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 36792
+              "duration": 32584
             }
           }
         ],
@@ -3543,7 +3592,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 48790
+              "duration": 129958
             }
           },
           {
@@ -3735,7 +3784,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 36791
+              "duration": 109749
             }
           }
         ],
@@ -3754,7 +3803,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 94250
+              "duration": 55624
             }
           },
           {
@@ -3956,7 +4005,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56416
+              "duration": 30167
             }
           }
         ],
@@ -3975,7 +4024,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 127209
+              "duration": 34875
             }
           },
           {
@@ -4167,7 +4216,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 65332
+              "duration": 33457
             }
           }
         ],
@@ -4186,7 +4235,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 63792
+              "duration": 55207
             }
           },
           {
@@ -4378,7 +4427,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39249
+              "duration": 36499
             }
           }
         ],
@@ -4397,7 +4446,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 51333
+              "duration": 43375
             }
           },
           {
@@ -4589,7 +4638,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 65999
+              "duration": 34542
             }
           }
         ],
@@ -4608,7 +4657,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 62707
+              "duration": 65582
             }
           },
           {
@@ -4800,7 +4849,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 37250
+              "duration": 38165
             }
           }
         ],
@@ -4819,7 +4868,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 69166
+              "duration": 45915
             }
           },
           {
@@ -5021,7 +5070,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 35334
+              "duration": 36583
             }
           }
         ],
@@ -5040,7 +5089,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 40708
+              "duration": 73708
             }
           },
           {
@@ -5252,7 +5301,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 121209
+              "duration": 37333
             }
           }
         ],
@@ -5282,7 +5331,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 51249
+              "duration": 42041
             }
           },
           {
@@ -5345,9 +5394,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「难度配置表」:",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 953249
             }
           },
           {
@@ -5355,9 +5407,12 @@
             "keyword": "Given ",
             "line": 15,
             "name": "玩家已完成角色与机体选择",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:39"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 191791
             }
           },
           {
@@ -5365,9 +5420,12 @@
             "keyword": "When ",
             "line": 16,
             "name": "系统加载难度选择界面",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:47"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 154624
             }
           },
           {
@@ -5375,9 +5433,12 @@
             "keyword": "Then ",
             "line": 17,
             "name": "显示「难度配置表」中已解锁难度",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:54"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 413874
             }
           },
           {
@@ -5385,9 +5446,12 @@
             "keyword": "And ",
             "line": 18,
             "name": "光标默认选中 Normal 难度",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:62"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 196416
             }
           },
           {
@@ -5395,7 +5459,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32917
+              "duration": 54666
             }
           }
         ],
@@ -5414,7 +5478,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 37374
+              "duration": 40791
             }
           },
           {
@@ -5477,9 +5541,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「难度配置表」:",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 90541
             }
           },
           {
@@ -5487,9 +5554,12 @@
             "keyword": "Given ",
             "line": 23,
             "name": "玩家尚未通关 Hard 难度",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:69"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 23375
             }
           },
           {
@@ -5497,9 +5567,12 @@
             "keyword": "When ",
             "line": 24,
             "name": "玩家尝试选择 Lunatic 难度",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:76"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 38916
             }
           },
           {
@@ -5507,9 +5580,12 @@
             "keyword": "Then ",
             "line": 25,
             "name": "系统提示 \"难度未解锁\"",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:93"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 162125
             }
           },
           {
@@ -5517,9 +5593,13 @@
             "keyword": "And ",
             "line": 26,
             "name": "保持难度选择界面",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:99"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "failed",
+              "duration": 87707,
+              "error_message": "AssertionError: expected undefined to equal 'difficulty_selection'\n    at CustomWorld.<anonymous> (/Users/bytedance/Projects/lytx2019/dolores_demo/apps/yoo_x1/tests/step-definitions/difficulty-selection.steps.ts:100:43)"
             }
           },
           {
@@ -5527,7 +5607,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32625
+              "duration": 76624
             }
           }
         ],
@@ -5546,7 +5626,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 52249
+              "duration": 68624
             }
           },
           {
@@ -5609,9 +5689,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「难度配置表」:",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 103250
             }
           },
           {
@@ -5619,9 +5702,12 @@
             "keyword": "Given ",
             "line": 29,
             "name": "玩家已无 Continue 通关 Hard 难度",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:106"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 358958
             }
           },
           {
@@ -5629,9 +5715,12 @@
             "keyword": "When ",
             "line": 30,
             "name": "玩家选择 Lunatic 难度",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:118"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 211874
             }
           },
           {
@@ -5639,9 +5728,12 @@
             "keyword": "Then ",
             "line": 31,
             "name": "系统确认难度选择为 Lunatic",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:129"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 341625
             }
           },
           {
@@ -5649,9 +5741,12 @@
             "keyword": "And ",
             "line": 32,
             "name": "进入游戏加载画面",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:135"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 162457
             }
           },
           {
@@ -5659,7 +5754,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33792
+              "duration": 34874
             }
           }
         ],
@@ -5678,7 +5773,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 54083
+              "duration": 43540
             }
           },
           {
@@ -5741,9 +5836,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「难度配置表」:",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 62708
             }
           },
           {
@@ -5761,8 +5859,11 @@
             "keyword": "When ",
             "line": 38,
             "name": "游戏逻辑初始化",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:148"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -5771,8 +5872,11 @@
             "keyword": "Then ",
             "line": 39,
             "name": "弹速全局系数应为 0.7",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:166"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -5781,8 +5885,11 @@
             "keyword": "And ",
             "line": 40,
             "name": "弹幕密度全局系数应为 0.7",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:172"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -5791,8 +5898,11 @@
             "keyword": "And ",
             "line": 41,
             "name": "符卡时长系数应为 1.2",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:178"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -5801,7 +5911,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 58666
+              "duration": 79792
             }
           }
         ],
@@ -5820,7 +5930,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 53833
+              "duration": 63541
             }
           },
           {
@@ -5883,9 +5993,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「难度配置表」:",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 189624
             }
           },
           {
@@ -5903,8 +6016,11 @@
             "keyword": "When ",
             "line": 38,
             "name": "游戏逻辑初始化",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:148"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -5913,8 +6029,11 @@
             "keyword": "Then ",
             "line": 39,
             "name": "弹速全局系数应为 1.0",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:166"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -5923,8 +6042,11 @@
             "keyword": "And ",
             "line": 40,
             "name": "弹幕密度全局系数应为 1.0",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:172"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -5933,8 +6055,11 @@
             "keyword": "And ",
             "line": 41,
             "name": "符卡时长系数应为 1.0",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:178"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -5943,7 +6068,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50374
+              "duration": 37791
             }
           }
         ],
@@ -5962,7 +6087,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47583
+              "duration": 59542
             }
           },
           {
@@ -6025,9 +6150,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「难度配置表」:",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 78083
             }
           },
           {
@@ -6045,8 +6173,11 @@
             "keyword": "When ",
             "line": 38,
             "name": "游戏逻辑初始化",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:148"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -6055,8 +6186,11 @@
             "keyword": "Then ",
             "line": 39,
             "name": "弹速全局系数应为 1.3",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:166"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -6065,8 +6199,11 @@
             "keyword": "And ",
             "line": 40,
             "name": "弹幕密度全局系数应为 1.3",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:172"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -6075,8 +6212,11 @@
             "keyword": "And ",
             "line": 41,
             "name": "符卡时长系数应为 0.9",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:178"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -6085,7 +6225,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 35083
+              "duration": 32750
             }
           }
         ],
@@ -6104,7 +6244,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47166
+              "duration": 48167
             }
           },
           {
@@ -6167,9 +6307,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「难度配置表」:",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:16"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 227499
             }
           },
           {
@@ -6187,8 +6330,11 @@
             "keyword": "When ",
             "line": 38,
             "name": "游戏逻辑初始化",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:148"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -6197,8 +6343,11 @@
             "keyword": "Then ",
             "line": 39,
             "name": "弹速全局系数应为 1.6",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:166"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -6207,8 +6356,11 @@
             "keyword": "And ",
             "line": 40,
             "name": "弹幕密度全局系数应为 1.6",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:172"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -6217,8 +6369,11 @@
             "keyword": "And ",
             "line": 41,
             "name": "符卡时长系数应为 0.8",
+            "match": {
+              "location": "tests/step-definitions/difficulty-selection.steps.ts:178"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -6227,7 +6382,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33291
+              "duration": 46457
             }
           }
         ],
@@ -6257,7 +6412,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 72333
+              "duration": 54458
             }
           },
           {
@@ -6864,7 +7019,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 31291
+              "duration": 33124
             }
           }
         ],
@@ -6883,7 +7038,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 53833
+              "duration": 53666
             }
           },
           {
@@ -7490,7 +7645,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 84541
+              "duration": 34999
             }
           }
         ],
@@ -7509,7 +7664,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 67874
+              "duration": 64792
             }
           },
           {
@@ -8116,7 +8271,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33833
+              "duration": 45000
             }
           }
         ],
@@ -8135,7 +8290,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 70917
+              "duration": 76333
             }
           },
           {
@@ -8742,7 +8897,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 36665
+              "duration": 34791
             }
           }
         ],
@@ -8761,7 +8916,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 65207
+              "duration": 63000
             }
           },
           {
@@ -9358,7 +9513,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 35916
+              "duration": 31541
             }
           }
         ],
@@ -9377,7 +9532,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46124
+              "duration": 66459
             }
           },
           {
@@ -9974,7 +10129,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 70916
+              "duration": 34541
             }
           }
         ],
@@ -9993,7 +10148,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 63750
+              "duration": 70374
             }
           },
           {
@@ -10590,7 +10745,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 34582
+              "duration": 34459
             }
           }
         ],
@@ -10609,7 +10764,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 68208
+              "duration": 58958
             }
           },
           {
@@ -11206,7 +11361,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 34042
+              "duration": 31250
             }
           }
         ],
@@ -11225,7 +11380,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 55500
+              "duration": 59750
             }
           },
           {
@@ -11802,7 +11957,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30541
+              "duration": 32917
             }
           }
         ],
@@ -11821,7 +11976,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46667
+              "duration": 56083
             }
           },
           {
@@ -12398,7 +12553,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 27249
+              "duration": 33292
             }
           }
         ],
@@ -12417,7 +12572,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50833
+              "duration": 43124
             }
           },
           {
@@ -12994,7 +13149,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 40541
+              "duration": 26792
             }
           }
         ],
@@ -13013,7 +13168,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56041
+              "duration": 54541
             }
           },
           {
@@ -13590,7 +13745,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30291
+              "duration": 29624
             }
           }
         ],
@@ -13609,7 +13764,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39083
+              "duration": 56708
             }
           },
           {
@@ -14206,7 +14361,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25583
+              "duration": 41957
             }
           }
         ],
@@ -14225,7 +14380,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 69375
+              "duration": 46249
             }
           },
           {
@@ -14822,7 +14977,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 37958
+              "duration": 31167
             }
           }
         ],
@@ -14841,7 +14996,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 53708
+              "duration": 40082
             }
           },
           {
@@ -15438,7 +15593,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32374
+              "duration": 25458
             }
           }
         ],
@@ -15457,7 +15612,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 54291
+              "duration": 40957
             }
           },
           {
@@ -16054,7 +16209,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 58875
+              "duration": 26834
             }
           }
         ],
@@ -16073,7 +16228,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 65582
+              "duration": 56915
             }
           },
           {
@@ -16670,7 +16825,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 42582
+              "duration": 32332
             }
           }
         ],
@@ -16689,7 +16844,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 49874
+              "duration": 54790
             }
           },
           {
@@ -17286,7 +17441,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 29250
+              "duration": 32582
             }
           }
         ],
@@ -17305,7 +17460,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46332
+              "duration": 57707
             }
           },
           {
@@ -17902,7 +18057,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 69167
+              "duration": 32667
             }
           }
         ],
@@ -17921,7 +18076,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 59000
+              "duration": 55583
             }
           },
           {
@@ -18518,7 +18673,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 73250
+              "duration": 30791
             }
           }
         ],
@@ -18537,7 +18692,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 62541
+              "duration": 52874
             }
           },
           {
@@ -19144,7 +19299,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 55834
+              "duration": 30457
             }
           }
         ],
@@ -19163,7 +19318,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46416
+              "duration": 56250
             }
           },
           {
@@ -19770,7 +19925,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32917
+              "duration": 36458
             }
           }
         ],
@@ -19789,7 +19944,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 59207
+              "duration": 54166
             }
           },
           {
@@ -20396,7 +20551,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30707
+              "duration": 35542
             }
           }
         ],
@@ -20415,7 +20570,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 53124
+              "duration": 50167
             }
           },
           {
@@ -21022,7 +21177,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 27915
+              "duration": 28500
             }
           }
         ],
@@ -21041,7 +21196,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56125
+              "duration": 37832
             }
           },
           {
@@ -21648,7 +21803,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 35624
+              "duration": 36208
             }
           }
         ],
@@ -21667,7 +21822,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 48583
+              "duration": 57459
             }
           },
           {
@@ -22284,7 +22439,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30207
+              "duration": 43334
             }
           }
         ],
@@ -22303,7 +22458,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50665
+              "duration": 50624
             }
           },
           {
@@ -22920,7 +23075,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 28333
+              "duration": 28874
             }
           }
         ],
@@ -22939,7 +23094,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 49417
+              "duration": 51000
             }
           },
           {
@@ -23556,7 +23711,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 31624
+              "duration": 32750
             }
           }
         ],
@@ -23575,7 +23730,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 38958
+              "duration": 50083
             }
           },
           {
@@ -24192,7 +24347,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 90291
+              "duration": 29500
             }
           }
         ],
@@ -24211,7 +24366,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 53415
+              "duration": 51208
             }
           },
           {
@@ -24818,7 +24973,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 29000
+              "duration": 28249
             }
           }
         ],
@@ -24837,7 +24992,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 57833
+              "duration": 55999
             }
           },
           {
@@ -25444,7 +25599,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 28625
+              "duration": 27999
             }
           }
         ],
@@ -25463,7 +25618,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 51917
+              "duration": 66541
             }
           },
           {
@@ -26070,7 +26225,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 28874
+              "duration": 35958
             }
           }
         ],
@@ -26089,7 +26244,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 55291
+              "duration": 53750
             }
           },
           {
@@ -26676,7 +26831,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32374
+              "duration": 82375
             }
           }
         ],
@@ -26695,7 +26850,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39540
+              "duration": 67292
             }
           },
           {
@@ -27282,7 +27437,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 29249
+              "duration": 35749
             }
           }
         ],
@@ -27312,7 +27467,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 60250
+              "duration": 50042
             }
           },
           {
@@ -27365,9 +27520,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「对话映射表」:",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:14"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 363165
             }
           },
           {
@@ -27375,9 +27533,12 @@
             "keyword": "Given ",
             "line": 15,
             "name": "进入 Stage 1 前",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:29"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 532124
             }
           },
           {
@@ -27385,9 +27546,12 @@
             "keyword": "When ",
             "line": 16,
             "name": "系统加载对话脚本",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:36"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 283709
             }
           },
           {
@@ -27405,8 +27569,11 @@
             "keyword": "And ",
             "line": 18,
             "name": "播放对应文本框动画",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:85"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -27415,7 +27582,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32792
+              "duration": 50125
             }
           }
         ],
@@ -27434,7 +27601,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 38749
+              "duration": 57332
             }
           },
           {
@@ -27487,9 +27654,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「对话映射表」:",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:14"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 42125
             }
           },
           {
@@ -27497,9 +27667,12 @@
             "keyword": "Given ",
             "line": 15,
             "name": "进入 Stage 5 前",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:29"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 101749
             }
           },
           {
@@ -27507,9 +27680,12 @@
             "keyword": "When ",
             "line": 16,
             "name": "系统加载对话脚本",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:36"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 44958
             }
           },
           {
@@ -27527,8 +27703,11 @@
             "keyword": "And ",
             "line": 18,
             "name": "播放对应文本框动画",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:85"
+            },
             "result": {
-              "status": "undefined",
+              "status": "skipped",
               "duration": 0
             }
           },
@@ -27537,7 +27716,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 29375
+              "duration": 30250
             }
           }
         ],
@@ -27556,7 +27735,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33082
+              "duration": 34708
             }
           },
           {
@@ -27609,9 +27788,12 @@
             "keyword": "Given ",
             "line": 5,
             "name": "系统已定义「对话映射表」:",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:14"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 39667
             }
           },
           {
@@ -27619,9 +27801,12 @@
             "keyword": "Given ",
             "line": 28,
             "name": "玩家以任意角色在 Normal 难度通关",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:96"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 250416
             }
           },
           {
@@ -27629,9 +27814,12 @@
             "keyword": "And ",
             "line": 29,
             "name": "无 Continue",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:105"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 140332
             }
           },
           {
@@ -27639,9 +27827,12 @@
             "keyword": "When ",
             "line": 30,
             "name": "查看标题菜单",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:112"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 125165
             }
           },
           {
@@ -27649,9 +27840,12 @@
             "keyword": "Then ",
             "line": 31,
             "name": "Extra 关卡选项应可选中",
+            "match": {
+              "location": "tests/step-definitions/story-dialogue.steps.ts:127"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 357416
             }
           },
           {
@@ -27659,7 +27853,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25166
+              "duration": 29999
             }
           }
         ],
