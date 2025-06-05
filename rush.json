@@ -342,6 +342,11 @@
       "reviewCategory": "production"
     },
     {
+      "packageName": "yoo_x1",
+      "projectFolder": "apps/yoo_x1",
+      "reviewCategory": "production"
+    },
+    {
       "packageName": "@dolores/ui-components",
       "projectFolder": "packages/ui-components",
       "reviewCategory": "production"
