@@ -9,15 +9,137 @@
 ---
 
 ## 2. Feature 一览  
-| 模块 | Feature 名称 | 描述 |
-|----|---------------|-----|
-| 角色系统 | Character Selection | 选择角色与机体，决定射击方式、符卡与对话 |
-| 难度系统 | Difficulty Selection | 选择或解锁不同难度并应用游戏系数 |
-| 核心机制 | Cherry Point System | 通过收集樱点提升樱计量，触发春度状态与残机奖励 |
-| 战斗系统 | Danmaku Shooting | 高/低速移动、射击、擦弹判定 |
-| 关卡流程 | Stage Progression | 关卡启动、流程控制、评分结算 |
-| BOSS 战 | Boss Encounter & Spell Card | 符卡宣言、奖励与失败惩罚 |
-| 故事系统 | Story Dialogue | 对话呈现、结局与隐藏关卡解锁 |
+
+```mermaid
+flowchart LR
+    Root[东方妖妖梦] --> A1[Character Selection<br/>角色选择]
+    Root --> B1[Difficulty Selection<br/>难度选择]
+    Root --> C1[Stage Progression<br/>关卡流程]
+    Root --> D1[Danmaku Shooting<br/>弹幕射击]
+    Root --> E1[Boss Encounter & Spell Card<br/>BOSS战与符卡]
+    Root --> F1[Cherry Point System<br/>樱点系统]
+    Root --> G1[Story Dialogue<br/>故事系统]
+    
+    A1 --> A1R1[角色与机体映射]
+    A1 --> A1R2[返回标题]
+    A1R1 --> A1R1S1[成功选择角色与机体<br/>Scenario Outline]
+    A1R2 --> A1R2S1[放弃选择返回标题<br/>Scenario]
+    
+    B1 --> B1R1[难度选择流程]
+    B1 --> B1R2[难度解锁条件]
+    B1 --> B1R3[难度参数影响]
+    B1R1 --> B1R1S1[成功进入难度选择界面<br/>Scenario]
+    B1R2 --> B1R2S1[选择未解锁的Lunatic难度<br/>Scenario]
+    B1R2 --> B1R2S2[成功解锁Lunatic并选择<br/>Scenario]
+    B1R3 --> B1R3S1[应用难度系数<br/>Scenario Outline]
+    
+    C1 --> C1R1[关卡加载]
+    C1 --> C1R2[地图滚动机制]
+    C1 --> C1R3[玩家移动边界]
+    C1 --> C1R4[地图环境效果]
+    C1 --> C1R5[特殊区域交互]
+    C1 --> C1R6[地图装饰物交互]
+    C1 --> C1R7[普通敌机生成规则]
+    C1 --> C1R8[BOSS战触发规则]
+    C1 --> C1R9[BOSS阶段进程]
+    C1 --> C1R10[关卡结算]
+    C1 --> C1R11[特殊关卡解锁]
+    C1R1 --> C1R1S1[关卡启动<br/>Scenario Outline]
+    C1R2 --> C1R2S1[地图背景滚动<br/>Scenario Outline]
+    C1R3 --> C1R3S1[玩家边界检测<br/>Scenario]
+    C1R3 --> C1R3S2[边界碰撞处理<br/>Scenario Outline]
+    C1R4 --> C1R4S1[环境效果激活<br/>Scenario Outline]
+    C1R5 --> C1R5S1[特殊区域触发<br/>Scenario Outline]
+    C1R6 --> C1R6S1[装饰物层次渲染<br/>Scenario]
+    C1R6 --> C1R6S2[装饰物动画效果<br/>Scenario]
+    C1R7 --> C1R7S1[普通敌机出现<br/>Scenario Outline]
+    C1R8 --> C1R8S1[BOSS战开始<br/>Scenario Outline]
+    C1R9 --> C1R9S1[BOSS攻击阶段转换<br/>Scenario]
+    C1R9 --> C1R9S2[符卡阶段结束转换<br/>Scenario]
+    C1R10 --> C1R10S1[关卡完结与评分结算<br/>Scenario]
+    C1R11 --> C1R11S1[Extra关卡解锁<br/>Scenario]
+    C1R11 --> C1R11S2[Phantasm关卡解锁<br/>Scenario]
+    
+    D1 --> D1R1[移动模式切换]
+    D1 --> D1R2[擦弹得分规则]
+    D1 --> D1R3[敌机碰撞判定]
+    D1 --> D1R4[游戏结束判定]
+    D1 --> D1R5[敌机击毁判定]
+    D1R1 --> D1R1S1[模式切换与射击<br/>Scenario Outline]
+    D1R2 --> D1R2S1[擦弹得分<br/>Scenario]
+    D1R3 --> D1R3S1[碰撞判定检测<br/>Scenario Outline]
+    D1R3 --> D1R3S2[弹幕碰撞判定<br/>Scenario]
+    D1R4 --> D1R4S1[残机耗尽游戏结束<br/>Scenario]
+    D1R4 --> D1R4S2[主动退出游戏<br/>Scenario]
+    D1R4 --> D1R4S3[通关游戏结束<br/>Scenario]
+    D1R5 --> D1R5S1[敌机生命值系统<br/>Scenario Outline]
+    D1R5 --> D1R5S2[敌机击毁奖励<br/>Scenario]
+    D1R5 --> D1R5S3[BOSS击毁特殊处理<br/>Scenario]
+    
+    E1 --> E1R1[符卡宣言规则]
+    E1 --> E1R2[符卡奖励规则]
+    E1 --> E1R3[符卡失败规则]
+    E1R1 --> E1R1S1[符卡宣言与计时<br/>Scenario Outline]
+    E1R2 --> E1R2S1[完美符卡击破<br/>Scenario]
+    E1R3 --> E1R3S1[失败符卡<br/>Scenario]
+    
+    F1 --> F1R1[樱点收集规则]
+    F1 --> F1R2[春度状态触发规则]
+    F1R1 --> F1R1S1[收集樱点并触发春度状态<br/>Scenario Outline]
+    F1R2 --> F1R2S1[达到奖励残机阈值<br/>Scenario]
+    
+    G1 --> G1R1[关卡对话呈现]
+    G1 --> G1R2[Extra解锁条件]
+    G1R1 --> G1R1S1[关卡开场对话<br/>Scenario Outline]
+    G1R2 --> G1R2S1[Extra关开启条件<br/>Scenario]
+    
+    %% 样式定义
+    classDef rootStyle fill:#ff9999,stroke:#333,stroke-width:3px
+    classDef featureStyle fill:#66b3ff,stroke:#333,stroke-width:2px
+    classDef ruleStyle fill:#99ff99,stroke:#333,stroke-width:2px
+    classDef scenarioStyle fill:#ffcc99,stroke:#333,stroke-width:1px
+    
+    class Root rootStyle
+    class A1,B1,C1,D1,E1,F1,G1 featureStyle
+    class A1R1,A1R2,B1R1,B1R2,B1R3,C1R1,C1R2,C1R3,C1R4,C1R5,C1R6,C1R7,C1R8,C1R9,C1R10,C1R11,D1R1,D1R2,D1R3,D1R4,D1R5,E1R1,E1R2,E1R3,F1R1,F1R2,G1R1,G1R2 ruleStyle
+    class A1R1S1,A1R2S1,B1R1S1,B1R2S1,B1R2S2,B1R3S1,C1R1S1,C1R2S1,C1R3S1,C1R3S2,C1R4S1,C1R5S1,C1R6S1,C1R6S2,C1R7S1,C1R8S1,C1R9S1,C1R9S2,C1R10S1,C1R11S1,C1R11S2,D1R1S1,D1R2S1,D1R3S1,D1R3S2,D1R4S1,D1R4S2,D1R4S3,D1R5S1,D1R5S2,D1R5S3,E1R1S1,E1R2S1,E1R3S1,F1R1S1,F1R2S1,G1R1S1,G1R2S1 scenarioStyle
+```
+
+### 功能依赖关系流程
+
+```mermaid
+flowchart TD
+    A1[Character Selection<br/>角色选择] --> B1[Difficulty Selection<br/>难度选择]
+    B1 --> C1[Stage Progression<br/>关卡流程]
+    C1 --> D1[Danmaku Shooting<br/>弹幕射击]
+    D1 --> E1[Boss Encounter<br/>BOSS战与符卡]
+    E1 --> F1[Cherry Point System<br/>樱点系统]
+    C1 --> G1[Story Dialogue<br/>故事系统]
+    D1 --> G1
+    E1 --> G1
+    F1 --> G1
+    
+    style A1 fill:#e1f5fe
+    style B1 fill:#f3e5f5
+    style C1 fill:#e8f5e8
+    style D1 fill:#fff3e0
+    style E1 fill:#ffebee
+    style F1 fill:#f1f8e9
+    style G1 fill:#fce4ec
+```
+
+### 测试覆盖度统计
+
+| 模块 | Feature 数量 | Rule 数量 | Scenario 数量 | Scenario Outline 数量 | 总测试用例 |
+|------|-------------|-----------|---------------|----------------------|------------|
+| 角色系统 | 1 | 2 | 1 | 1 | 8 |
+| 难度系统 | 1 | 3 | 3 | 1 | 7 |
+| 关卡流程 | 1 | 11 | 8 | 7 | 34 |
+| 战斗系统 | 1 | 5 | 6 | 3 | 18 |
+| BOSS战 | 1 | 3 | 2 | 1 | 4 |
+| 核心机制 | 1 | 2 | 1 | 1 | 4 |
+| 故事系统 | 1 | 2 | 1 | 1 | 3 |
+| **总计** | **7** | **28** | **22** | **15** | **78** |
 
 ---
 
@@ -108,153 +230,7 @@ Feature: 难度选择
         | Lunatic  | 1.6      | 1.6      | 0.8      |
 ```
 
-### 3.3 Feature: Cherry Point System / 樱点系统
-```gherkin
-Feature: 樱点系统
-  玩家通过收集樱点提升樱计量，达到阈值启动春度状态并可获残机。
-
-  Background:
-    Given 系统已定义「樱点系统配置表」:
-      | 配置ID | 樱计量上限 | 春度持续时间(s) | 春度触发阈值 | 残机奖励首次阈值 | 残机奖励后续间隔 |
-      | DEFAULT| 50000      | 10              | 50000        | 3                | 5                |
-
-  Rule: 樱点收集规则 — 每拾取1樱点增加1计量
-    Scenario Outline: 收集樱点并触发春度状态
-      Given 当前樱计量为 <初始值>
-      When 玩家收集了 <收集数量> 个樱点
-      Then 樱计量应为 <结果樱计量>
-      And 是否触发春度状态 = <是否触发春度>
-
-      Examples:
-        | 初始值 | 收集数量 | 是否触发春度 | 结果樱计量 |
-        | 49500 | 600   | 是 | 100  |
-        | 40000 | 12000 | 是 | 2000 |
-        | 0     | 51000 | 是 | 1000 |
-
-  Rule: 春度状态触发规则 — 累计次数奖励残机
-    Scenario: 达到奖励残机阈值
-      Given 已累计获得 3 次春度状态
-      When 再次进入春度状态
-      Then 玩家增加 1 残机
-```
-
-### 3.4 Feature: Danmaku Shooting / 弹幕射击
-```gherkin
-Feature: 弹幕射击
-  玩家可在高速/低速两种移动模式下射击并擦弹获取分数。
-
-  Background:
-    Given 系统已定义「移动模式配置表」:
-      | 移动模式 | 操作键 | 期望速度 | 射击形式 |
-      | 高速     | Shift  | 低速     | 精准集中 |
-      | 低速     | Shift  | 高速     | 散射     |
-    And 系统已定义「擦弹判定配置表」:
-      | 参数     | 值  |
-      | 擦弹距离 | 3px |
-      | 擦弹分数 | 500 |
-    And 系统已定义「碰撞判定配置表」:
-      | 参数           | 值    |
-      | 玩家hitbox半径 | 2px   |
-      | 敌机hitbox半径 | 8px   |
-      | 弹幕hitbox半径 | 4px   |
-    And 系统已定义「游戏结束条件配置表」:
-      | 条件     | 值  |
-      | 初始残机 | 3   |
-      | 初始Bomb | 3   |
-
-  Rule: 移动模式切换 — Shift键切换高低速
-    Scenario Outline: 模式切换与射击
-      Given 玩家处于 <移动模式>
-      When 玩家按下 <操作键>
-      Then 移动速度应切换为 <期望速度>
-      And 射击类型为 <射击形式>
-
-      Examples:
-        | 移动模式 | 操作键 | 期望速度 | 射击形式 |
-        | 高速     | Shift  | 低速     | 精准集中 |
-        | 低速     | Shift  | 高速     | 散射     |
-
-  Rule: 擦弹得分规则 — 距离3px内视为擦弹
-    Scenario: 擦弹得分
-      Given 子弹与玩家 hitbox 距离小于 3px
-      When 没有发生碰撞
-      Then 系统记录一次擦弹
-      And 给予 500 分基础分数
-
-  Rule: 敌机碰撞判定 — 玩家与敌机或弹幕接触判定
-    Scenario Outline: 碰撞判定检测
-      Given 玩家位于坐标 (100, 200)
-      And 敌机位于坐标 <敌机坐标>
-      When 计算两者中心距离
-      Then 判定结果为 <是否碰撞>
-
-      Examples:
-        | 敌机坐标    | 是否碰撞 |
-        | (100, 210) | 是       |
-        | (105, 205) | 是       |
-        | (112, 212) | 否       |
-
-    Scenario: 弹幕碰撞判定
-      Given 玩家 hitbox 半径为 2px
-      And 弹幕 hitbox 半径为 4px
-      When 玩家中心与弹幕中心距离 ≤ 6px
-      Then 判定为碰撞
-      And 触发玩家Miss状态
-
-  Rule: 游戏结束判定 — 残机耗尽或主动退出
-    Scenario: 残机耗尽游戏结束
-      Given 当前残机数为 0
-      When 玩家发生碰撞触发Miss
-      Then 播放游戏结束音效
-      And 显示 "Game Over" 画面
-      And 记录最终得分到排行榜
-
-    Scenario: 主动退出游戏
-      Given 游戏进行中
-      When 玩家按下ESC键选择退出
-      Then 暂停游戏显示退出确认对话框
-      And 选择确认后返回标题画面
-
-    Scenario: 通关游戏结束
-      Given 玩家完成最后一个关卡
-      When BOSS被击败且关卡结算完成
-      Then 播放通关音效
-      And 显示Ending画面
-      And 解锁相应难度成就
-
-  Rule: 敌机击毁判定 — 累计伤害达到HP上限
-    Scenario Outline: 敌机生命值系统
-      Given 敌机类型为 <敌机类型> HP为 <初始HP>
-      When 玩家射击命中造成 <伤害值> 点伤害
-      Then 敌机剩余HP为 <剩余HP>
-      And 击毁状态为 <是否击毁>
-
-      Examples:
-        | 敌机类型 | 初始HP | 伤害值 | 剩余HP | 是否击毁 |
-        | 小妖精   | 10     | 5      | 5      | 否       |
-        | 小妖精   | 10     | 10     | 0      | 是       |
-        | 中妖精   | 50     | 30     | 20     | 否       |
-        | 大妖精   | 100    | 100    | 0      | 是       |
-
-    Scenario: 敌机击毁奖励
-      Given 敌机被击毁
-      When 击毁动画播放完成
-      Then 在敌机位置生成得分道具
-      And 播放击毁音效
-      And 根据敌机类型给予对应分数
-
-    Scenario: BOSS击毁特殊处理
-      Given BOSS类型敌机HP归零
-      When 非符卡阶段被击毁
-      Then 进入下一个攻击阶段或符卡
-      And 播放阶段转换动画
-      
-      But 符卡阶段被击毁
-      Then 符卡宣告结束
-      And 判定符卡完成奖励
-```
-
-### 3.5 Feature: Stage Progression / 关卡流程
+### 3.3 Feature: Stage Progression / 关卡流程
 ```gherkin
 Feature: 关卡流程
   管理六个主关卡及 Extra/Phantasm 的启动、结束与难度流程。
@@ -483,7 +459,122 @@ Feature: 关卡流程
       Then Phantasm关卡选项变为可选
 ```
 
-### 3.6 Feature: Boss Encounter & Spell Card / BOSS 战与符卡
+### 3.4 Feature: Danmaku Shooting / 弹幕射击
+```gherkin
+Feature: 弹幕射击
+  玩家可在高速/低速两种移动模式下射击并擦弹获取分数。
+
+  Background:
+    Given 系统已定义「移动模式配置表」:
+      | 移动模式 | 操作键 | 期望速度 | 射击形式 |
+      | 高速     | Shift  | 低速     | 精准集中 |
+      | 低速     | Shift  | 高速     | 散射     |
+    And 系统已定义「擦弹判定配置表」:
+      | 参数     | 值  |
+      | 擦弹距离 | 3px |
+      | 擦弹分数 | 500 |
+    And 系统已定义「碰撞判定配置表」:
+      | 参数           | 值    |
+      | 玩家hitbox半径 | 2px   |
+      | 敌机hitbox半径 | 8px   |
+      | 弹幕hitbox半径 | 4px   |
+    And 系统已定义「游戏结束条件配置表」:
+      | 条件     | 值  |
+      | 初始残机 | 3   |
+      | 初始Bomb | 3   |
+
+  Rule: 移动模式切换 — Shift键切换高低速
+    Scenario Outline: 模式切换与射击
+      Given 玩家处于 <移动模式>
+      When 玩家按下 <操作键>
+      Then 移动速度应切换为 <期望速度>
+      And 射击类型为 <射击形式>
+
+      Examples:
+        | 移动模式 | 操作键 | 期望速度 | 射击形式 |
+        | 高速     | Shift  | 低速     | 精准集中 |
+        | 低速     | Shift  | 高速     | 散射     |
+
+  Rule: 擦弹得分规则 — 距离3px内视为擦弹
+    Scenario: 擦弹得分
+      Given 子弹与玩家 hitbox 距离小于 3px
+      When 没有发生碰撞
+      Then 系统记录一次擦弹
+      And 给予 500 分基础分数
+
+  Rule: 敌机碰撞判定 — 玩家与敌机或弹幕接触判定
+    Scenario Outline: 碰撞判定检测
+      Given 玩家位于坐标 (100, 200)
+      And 敌机位于坐标 <敌机坐标>
+      When 计算两者中心距离
+      Then 判定结果为 <是否碰撞>
+
+      Examples:
+        | 敌机坐标    | 是否碰撞 |
+        | (100, 210) | 是       |
+        | (105, 205) | 是       |
+        | (112, 212) | 否       |
+
+    Scenario: 弹幕碰撞判定
+      Given 玩家 hitbox 半径为 2px
+      And 弹幕 hitbox 半径为 4px
+      When 玩家中心与弹幕中心距离 ≤ 6px
+      Then 判定为碰撞
+      And 触发玩家Miss状态
+
+  Rule: 游戏结束判定 — 残机耗尽或主动退出
+    Scenario: 残机耗尽游戏结束
+      Given 当前残机数为 0
+      When 玩家发生碰撞触发Miss
+      Then 播放游戏结束音效
+      And 显示 "Game Over" 画面
+      And 记录最终得分到排行榜
+
+    Scenario: 主动退出游戏
+      Given 游戏进行中
+      When 玩家按下ESC键选择退出
+      Then 暂停游戏显示退出确认对话框
+      And 选择确认后返回标题画面
+
+    Scenario: 通关游戏结束
+      Given 玩家完成最后一个关卡
+      When BOSS被击败且关卡结算完成
+      Then 播放通关音效
+      And 显示Ending画面
+      And 解锁相应难度成就
+
+  Rule: 敌机击毁判定 — 累计伤害达到HP上限
+    Scenario Outline: 敌机生命值系统
+      Given 敌机类型为 <敌机类型> HP为 <初始HP>
+      When 玩家射击命中造成 <伤害值> 点伤害
+      Then 敌机剩余HP为 <剩余HP>
+      And 击毁状态为 <是否击毁>
+
+      Examples:
+        | 敌机类型 | 初始HP | 伤害值 | 剩余HP | 是否击毁 |
+        | 小妖精   | 10     | 5      | 5      | 否       |
+        | 小妖精   | 10     | 10     | 0      | 是       |
+        | 中妖精   | 50     | 30     | 20     | 否       |
+        | 大妖精   | 100    | 100    | 0      | 是       |
+
+    Scenario: 敌机击毁奖励
+      Given 敌机被击毁
+      When 击毁动画播放完成
+      Then 在敌机位置生成得分道具
+      And 播放击毁音效
+      And 根据敌机类型给予对应分数
+
+    Scenario: BOSS击毁特殊处理
+      Given BOSS类型敌机HP归零
+      When 非符卡阶段被击毁
+      Then 进入下一个攻击阶段或符卡
+      
+      But 符卡阶段被击毁
+      Then 符卡宣告结束
+      And 判定符卡完成奖励
+```
+
+### 3.5 Feature: Boss Encounter & Spell Card / BOSS 战与符卡
 ```gherkin
 Feature: BOSS 战与符卡
   每位BOSS拥有多张符卡，击破符卡可获得奖励，失败则损失奖励。
@@ -517,6 +608,36 @@ Feature: BOSS 战与符卡
     Scenario: 失败符卡
       When 玩家在符卡期间 Miss 或 Bomb
       Then 取消该符卡奖励
+```
+
+### 3.6 Feature: Cherry Point System / 樱点系统
+```gherkin
+Feature: 樱点系统
+  玩家通过收集樱点提升樱计量，达到阈值启动春度状态并可获残机。
+
+  Background:
+    Given 系统已定义「樱点系统配置表」:
+      | 配置ID | 樱计量上限 | 春度持续时间(s) | 春度触发阈值 | 残机奖励首次阈值 | 残机奖励后续间隔 |
+      | DEFAULT| 50000      | 10              | 50000        | 3                | 5                |
+
+  Rule: 樱点收集规则 — 每拾取1樱点增加1计量
+    Scenario Outline: 收集樱点并触发春度状态
+      Given 当前樱计量为 <初始值>
+      When 玩家收集了 <收集数量> 个樱点
+      Then 樱计量应为 <结果樱计量>
+      And 是否触发春度状态 = <是否触发春度>
+
+      Examples:
+        | 初始值 | 收集数量 | 是否触发春度 | 结果樱计量 |
+        | 49500 | 600   | 是 | 100  |
+        | 40000 | 12000 | 是 | 2000 |
+        | 0     | 51000 | 是 | 1000 |
+
+  Rule: 春度状态触发规则 — 累计次数奖励残机
+    Scenario: 达到奖励残机阈值
+      Given 已累计获得 3 次春度状态
+      When 再次进入春度状态
+      Then 玩家增加 1 残机
 ```
 
 ### 3.7 Feature: Story Dialogue / 故事系统
