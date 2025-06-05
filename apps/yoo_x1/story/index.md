@@ -6,9 +6,52 @@
 ## 1. 项目概述与背景  
 东方妖妖梦（Touhou Youyoumu）是东方Project官方弹幕射击系列第 7 作。玩家操纵三名主角（博丽灵梦、雾雨魔理沙、十六夜咲夜）之一，在六大主关卡及 Extra/Phantasm 关卡中，利用樱点系统提升战力、击败各关 BOSS，并最终解决「春雪异变」。
 
----
+## 2. Feature 概览 
 
-## 2. Feature 一览  
+### 2.1 功能场景摘要
+
+| Feature | Rule | Scenario/Scenario Outline | 类型 | 测试用例数 |
+|---------|------|---------------------------|------|------------|
+| **Character Selection<br/>角色选择** | 角色与机体映射 | 成功选择角色与机体 | Scenario Outline | 6 |
+| | 返回标题 | 放弃选择返回标题 | Scenario | 1 |
+| **Difficulty Selection<br/>难度选择** | 难度选择流程 | 成功进入难度选择界面 | Scenario | 1 |
+| | 难度解锁条件 | 选择未解锁的Lunatic难度 | Scenario | 1 |
+| | | 成功解锁Lunatic并选择 | Scenario | 1 |
+| | 难度参数影响 | 应用难度系数 | Scenario Outline | 4 |
+| **Stage Progression<br/>关卡流程** | 关卡加载 | 关卡启动 | Scenario Outline | 4 |
+| | 地图滚动机制 | 地图背景滚动 | Scenario Outline | 3 |
+| | 玩家移动边界 | 玩家边界检测 | Scenario | 1 |
+| | | 边界碰撞处理 | Scenario Outline | 4 |
+| | 地图环境效果 | 环境效果激活 | Scenario Outline | 4 |
+| | 特殊区域交互 | 特殊区域触发 | Scenario Outline | 4 |
+| | 地图装饰物交互 | 装饰物层次渲染 | Scenario | 1 |
+| | | 装饰物动画效果 | Scenario | 1 |
+| | 普通敌机生成规则 | 普通敌机出现 | Scenario Outline | 3 |
+| | BOSS战触发规则 | BOSS战开始 | Scenario Outline | 4 |
+| | BOSS阶段进程 | BOSS攻击阶段转换 | Scenario | 1 |
+| | | 符卡阶段结束转换 | Scenario | 1 |
+| | 关卡结算 | 关卡完结与评分结算 | Scenario | 1 |
+| | 特殊关卡解锁 | Extra关卡解锁 | Scenario | 1 |
+| | | Phantasm关卡解锁 | Scenario | 1 |
+| **Danmaku Shooting<br/>弹幕射击** | 移动模式切换 | 模式切换与射击 | Scenario Outline | 2 |
+| | 擦弹得分规则 | 擦弹得分 | Scenario | 1 |
+| | 敌机碰撞判定 | 碰撞判定检测 | Scenario Outline | 3 |
+| | | 弹幕碰撞判定 | Scenario | 1 |
+| | 游戏结束判定 | 残机耗尽游戏结束 | Scenario | 1 |
+| | | 主动退出游戏 | Scenario | 1 |
+| | | 通关游戏结束 | Scenario | 1 |
+| | 敌机击毁判定 | 敌机生命值系统 | Scenario Outline | 4 |
+| | | 敌机击毁奖励 | Scenario | 1 |
+| | | BOSS击毁特殊处理 | Scenario | 1 |
+| **Boss Encounter & Spell Card<br/>BOSS战与符卡** | 符卡宣言规则 | 符卡宣言与计时 | Scenario Outline | 2 |
+| | 符卡奖励规则 | 完美符卡击破 | Scenario | 1 |
+| | 符卡失败规则 | 失败符卡 | Scenario | 1 |
+| **Cherry Point System<br/>樱点系统** | 樱点收集规则 | 收集樱点并触发春度状态 | Scenario Outline | 3 |
+| | 春度状态触发规则 | 达到奖励残机阈值 | Scenario | 1 |
+| **Story Dialogue<br/>故事系统** | 关卡对话呈现 | 关卡开场对话 | Scenario Outline | 2 |
+| | Extra解锁条件 | Extra关开启条件 | Scenario | 1 |
+
+### 2.2 功能场景地图
 
 ```mermaid
 flowchart LR
@@ -104,44 +147,6 @@ flowchart LR
     class A1R1,A1R2,B1R1,B1R2,B1R3,C1R1,C1R2,C1R3,C1R4,C1R5,C1R6,C1R7,C1R8,C1R9,C1R10,C1R11,D1R1,D1R2,D1R3,D1R4,D1R5,E1R1,E1R2,E1R3,F1R1,F1R2,G1R1,G1R2 ruleStyle
     class A1R1S1,A1R2S1,B1R1S1,B1R2S1,B1R2S2,B1R3S1,C1R1S1,C1R2S1,C1R3S1,C1R3S2,C1R4S1,C1R5S1,C1R6S1,C1R6S2,C1R7S1,C1R8S1,C1R9S1,C1R9S2,C1R10S1,C1R11S1,C1R11S2,D1R1S1,D1R2S1,D1R3S1,D1R3S2,D1R4S1,D1R4S2,D1R4S3,D1R5S1,D1R5S2,D1R5S3,E1R1S1,E1R2S1,E1R3S1,F1R1S1,F1R2S1,G1R1S1,G1R2S1 scenarioStyle
 ```
-
-### 功能依赖关系流程
-
-```mermaid
-flowchart TD
-    A1[Character Selection<br/>角色选择] --> B1[Difficulty Selection<br/>难度选择]
-    B1 --> C1[Stage Progression<br/>关卡流程]
-    C1 --> D1[Danmaku Shooting<br/>弹幕射击]
-    D1 --> E1[Boss Encounter<br/>BOSS战与符卡]
-    E1 --> F1[Cherry Point System<br/>樱点系统]
-    C1 --> G1[Story Dialogue<br/>故事系统]
-    D1 --> G1
-    E1 --> G1
-    F1 --> G1
-    
-    style A1 fill:#e1f5fe
-    style B1 fill:#f3e5f5
-    style C1 fill:#e8f5e8
-    style D1 fill:#fff3e0
-    style E1 fill:#ffebee
-    style F1 fill:#f1f8e9
-    style G1 fill:#fce4ec
-```
-
-### 测试覆盖度统计
-
-| 模块 | Feature 数量 | Rule 数量 | Scenario 数量 | Scenario Outline 数量 | 总测试用例 |
-|------|-------------|-----------|---------------|----------------------|------------|
-| 角色系统 | 1 | 2 | 1 | 1 | 8 |
-| 难度系统 | 1 | 3 | 3 | 1 | 7 |
-| 关卡流程 | 1 | 11 | 8 | 7 | 34 |
-| 战斗系统 | 1 | 5 | 6 | 3 | 18 |
-| BOSS战 | 1 | 3 | 2 | 1 | 4 |
-| 核心机制 | 1 | 2 | 1 | 1 | 4 |
-| 故事系统 | 1 | 2 | 1 | 1 | 3 |
-| **总计** | **7** | **28** | **22** | **15** | **78** |
-
----
 
 ## 3. 详细 Gherkin 用例  
 
