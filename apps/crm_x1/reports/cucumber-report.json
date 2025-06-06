@@ -1,0 +1,2167 @@
+[
+  {
+    "description": "  管理者对线索转商机申请进行把控，保证质量与合规。",
+    "elements": [
+      {
+        "description": "",
+        "id": "审批流程;转商机审批;管理者审批通过",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "管理者审批通过",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "状态"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "待审批"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "已通过"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "已驳回"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「审批状态枚举」:",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5745666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "商机申请 \"OP-003\" 状态为 \"待审批\"",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2514582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "登录用户为对应管理者",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 363917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "点击「通过」",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 253624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "商机申请状态更新为 \"已通过\"",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1039417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "商机状态更新为 \"进行中\"",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:104"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 778875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "通知申请人",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 365541
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "审批流程;转商机审批;管理者驳回",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "管理者驳回",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "状态"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "待审批"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "已通过"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "已驳回"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「审批状态枚举」:",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "商机申请 \"OP-004\" 状态为 \"待审批\"",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 153082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "输入驳回原因 \"信息不足\"",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:130"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 211791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "点击「驳回」",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:135"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "申请状态更新为 \"已驳回\"",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:163"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 265042,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -待审批\n    +已驳回\n\n    at CustomWorld.<anonymous> (/Users/bytedance/Projects/lytx2019/dolores_demo/apps/crm_x1/tests/step-definitions/approval-workflow.steps.ts:165:62)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "通知申请人包含驳回原因",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:170"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "审批流程;权限校验;非管理者审批拦截",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "非管理者审批拦截",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "状态"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "待审批"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "已通过"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "已驳回"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「审批状态枚举」:",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 159916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "销售人员尝试审批商机申请",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:185"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 212915
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "点击「通过」",
+            "match": {
+              "location": "tests/step-definitions/approval-workflow.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "系统提示 \"无审批权限\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "审批流程",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "审批流程",
+    "tags": [],
+    "uri": "story/approval_workflow.feature"
+  },
+  {
+    "description": "  为销售流程提供统一的客户主数据，支撑拜访与商机阶段的精准归属。",
+    "elements": [
+      {
+        "description": "",
+        "id": "客户管理;创建客户;新建客户成功",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "新建客户成功",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "字段",
+                      "类型",
+                      "是否必填"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户名称",
+                      "文本",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户行业",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户分层",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "人员规模",
+                      "选项",
+                      "否"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "国家/地区",
+                      "选项",
+                      "否"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "官方网站",
+                      "URL",
+                      "否"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「客户字段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 255540
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "销售人员已登录系统",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "在客户列表点击「新建客户」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120207
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "客户名称",
+                      "=",
+                      "\"上海星辰科技\""
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户行业",
+                      "=",
+                      "\"软件\""
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户分层",
+                      "=",
+                      "\"A\""
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 18,
+            "name": "输入:",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 925875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "点击「保存」",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "系统提示 \"创建成功\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "客户列表出现 \"上海星辰科技\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:124"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "客户管理;编辑客户;批量字段修改",
+        "keyword": "Scenario Outline",
+        "line": 36,
+        "name": "批量字段修改",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "字段",
+                      "类型",
+                      "是否必填"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户名称",
+                      "文本",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户行业",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户分层",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "人员规模",
+                      "选项",
+                      "否"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "国家/地区",
+                      "选项",
+                      "否"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "官方网站",
+                      "URL",
+                      "否"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「客户字段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "已存在客户 \"上海星辰科技\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "销售人员将 \"官方网站\" 修改为 \"https://xing.com\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:153"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "点击「保存」",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "\"官方网站\" 应显示为 \"https://xing.com\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:188"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "系统记录一条修改日志",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:195"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "客户管理;编辑客户;批量字段修改",
+        "keyword": "Scenario Outline",
+        "line": 37,
+        "name": "批量字段修改",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "字段",
+                      "类型",
+                      "是否必填"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户名称",
+                      "文本",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户行业",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户分层",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "人员规模",
+                      "选项",
+                      "否"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "国家/地区",
+                      "选项",
+                      "否"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "官方网站",
+                      "URL",
+                      "否"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「客户字段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "已存在客户 \"华北数码集团\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "销售人员将 \"客户分层\" 修改为 \"B\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:153"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "点击「保存」",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "\"客户分层\" 应显示为 \"B\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:188"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "系统记录一条修改日志",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:195"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "客户管理;必填字段校验;缺失必填字段拦截",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "缺失必填字段拦截",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "字段",
+                      "类型",
+                      "是否必填"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户名称",
+                      "文本",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户行业",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户分层",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "人员规模",
+                      "选项",
+                      "否"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "国家/地区",
+                      "选项",
+                      "否"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "官方网站",
+                      "URL",
+                      "否"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「客户字段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 41,
+            "name": "销售人员点击「新建客户」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:207"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 203833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "仅填写 \"客户行业=制造业\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:213"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 491959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "点击「保存」",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "系统提示 \"客户名称为必填项\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "不保存记录",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:221"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "客户管理",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "客户管理",
+    "tags": [],
+    "uri": "story/customer_management.feature"
+  },
+  {
+    "description": "  跟踪潜在合同金额与阶段，提升转化率。",
+    "elements": [
+      {
+        "description": "",
+        "id": "商机管理;发起转商机申请;创建商机申请",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "创建商机申请",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "阶段",
+                      "顺序"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "立项评估",
+                      "1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "方案制定",
+                      "2"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "合同谈判",
+                      "3"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "成交/关闭",
+                      "4"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「商机阶段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 352499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "销售人员在拜访记录详情页",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 185166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "点击「转商机申请」",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 284874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "输入预计签单金额 \"1000000\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 412874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "选择产品线 \"AI 平台\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 302415
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "选择签单概率 \"60%\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 275166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "点击「提交」",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 141957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "系统创建状态为 \"待审批\" 的商机申请",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 327707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "通知对应管理者",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "商机管理;维护商机;更新商机阶段",
+        "keyword": "Scenario Outline",
+        "line": 34,
+        "name": "更新商机阶段",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "阶段",
+                      "顺序"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "立项评估",
+                      "1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "方案制定",
+                      "2"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "合同谈判",
+                      "3"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "成交/关闭",
+                      "4"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「商机阶段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "商机 \"OP-001\" 当前阶段为 \"立项评估\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 637915
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "销售人员为该商机负责人",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:173"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "将阶段修改为 \"方案制定\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:190"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 296082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "点击「保存」",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "商机阶段应更新为 \"方案制定\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:219"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "系统写入阶段变更历史",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:226"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "商机管理;维护商机;更新商机阶段",
+        "keyword": "Scenario Outline",
+        "line": 35,
+        "name": "更新商机阶段",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "阶段",
+                      "顺序"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "立项评估",
+                      "1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "方案制定",
+                      "2"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "合同谈判",
+                      "3"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "成交/关闭",
+                      "4"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「商机阶段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "商机 \"OP-002\" 当前阶段为 \"方案制定\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 199625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "销售人员为该商机负责人",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:173"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "将阶段修改为 \"合同谈判\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:190"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "点击「保存」",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "商机阶段应更新为 \"合同谈判\"",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:219"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "系统写入阶段变更历史",
+            "match": {
+              "location": "tests/step-definitions/opportunity-management.steps.ts:226"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "商机管理",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "商机管理",
+    "tags": [],
+    "uri": "story/opportunity_management.feature"
+  },
+  {
+    "description": "  提供多维度漏斗与转化率报表，支持权限分级可视化。",
+    "elements": [
+      {
+        "description": "",
+        "id": "统计分析;商机漏斗;查看商机漏斗",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "查看商机漏斗",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "报表名",
+                      "模板ID"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "商机漏斗",
+                      "RPT_OP_FUNNEL"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "拜访转化率",
+                      "RPT_VISIT_CONV"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「报表配置表」:",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 274082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "管理者进入「统计分析」模块",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "选择报表 \"商机漏斗\"",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 462458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "系统展示按阶段聚合的商机数量与金额",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 526333
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "统计分析;拜访转化率;计算拜访→商机转化率",
+        "keyword": "Scenario Outline",
+        "line": 24,
+        "name": "计算拜访→商机转化率",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "报表名",
+                      "模板ID"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "商机漏斗",
+                      "RPT_OP_FUNNEL"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "拜访转化率",
+                      "RPT_VISIT_CONV"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「报表配置表」:",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "统计周期为 \"本月\"",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 392790
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "系统自动汇总数据",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173459
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "报表展示 \"本月\" 内拜访数 40、转商机申请数 8、转化率 20%",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "统计分析;拜访转化率;计算拜访→商机转化率",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "计算拜访→商机转化率",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "报表名",
+                      "模板ID"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "商机漏斗",
+                      "RPT_OP_FUNNEL"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "拜访转化率",
+                      "RPT_VISIT_CONV"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「报表配置表」:",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "统计周期为 \"本季度\"",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "系统自动汇总数据",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "报表展示 \"本季度\" 内拜访数 120、转商机申请数 30、转化率 25%",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "统计分析;数据权限;销售人员查看个人数据",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "销售人员查看个人数据",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "报表名",
+                      "模板ID"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "商机漏斗",
+                      "RPT_OP_FUNNEL"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "拜访转化率",
+                      "RPT_VISIT_CONV"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「报表配置表」:",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50540
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "销售人员进入「统计分析」",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 168833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "报表加载完成",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:132"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "仅展示该销售人员相关的数据指标",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:156"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 222457
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "统计分析",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "统计分析",
+    "tags": [],
+    "uri": "story/statistical_analysis.feature"
+  },
+  {
+    "description": "  记录销售与客户的接触详情，为商机转化提供量化依据。",
+    "elements": [
+      {
+        "description": "",
+        "id": "拜访记录管理;创建拜访;记录一次拜访",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "记录一次拜访",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "字段",
+                      "类型",
+                      "是否必填"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户",
+                      "关联",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "拜访日期",
+                      "日期",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户阶段",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "详细沟通记录",
+                      "文本",
+                      "否"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「拜访记录字段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 226708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "已存在客户 \"上海星辰科技\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "销售人员点击「新建拜访记录」",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "选择客户 \"上海星辰科技\"",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:62"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "选择日期 \"2025-06-10\"",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:68"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "选择客户阶段 \"需求确认\"",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:74"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "点击「保存」",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "系统生成拜访记录",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:117"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "拜访记录关联客户 \"上海星辰科技\"",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:131"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "拜访记录管理;创建拜访;记录一次拜访",
+        "keyword": "Scenario Outline",
+        "line": 26,
+        "name": "记录一次拜访",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "字段",
+                      "类型",
+                      "是否必填"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户",
+                      "关联",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "拜访日期",
+                      "日期",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户阶段",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "详细沟通记录",
+                      "文本",
+                      "否"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「拜访记录字段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82165
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "已存在客户 \"华北数码集团\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "销售人员点击「新建拜访记录」",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "选择客户 \"华北数码集团\"",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:62"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "选择日期 \"2025-06-11\"",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:68"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "选择客户阶段 \"意向培养\"",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:74"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "点击「保存」",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "系统生成拜访记录",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:117"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "拜访记录关联客户 \"华北数码集团\"",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:131"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "拜访记录管理;权限查看;管理者查看所有拜访记录",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "管理者查看所有拜访记录",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "字段",
+                      "类型",
+                      "是否必填"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户",
+                      "关联",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "拜访日期",
+                      "日期",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "客户阶段",
+                      "选项",
+                      "是"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "详细沟通记录",
+                      "文本",
+                      "否"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "系统已定义「拜访记录字段配置表」:",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "管理者进入「拜访记录」页面",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:143"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 267792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "页面加载完成",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:156"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 252624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "系统展示全员拜访记录列表",
+            "match": {
+              "location": "tests/step-definitions/visit-record-management.steps.ts:173"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 446750
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "拜访记录管理",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "拜访记录管理",
+    "tags": [],
+    "uri": "story/visit_record_management.feature"
+  }
+]
