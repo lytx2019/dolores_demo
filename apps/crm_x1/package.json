@@ -35,6 +35,7 @@
     "chai": "^4.3.10",
     "@types/chai": "^4.3.11",
     "ts-node": "^10.9.2",
-    "cucumber-html-reporter": "^7.1.1"
+    "cucumber-html-reporter": "^7.1.1",
+    "autoprefixer": "~10.4.21"
   }
 } 

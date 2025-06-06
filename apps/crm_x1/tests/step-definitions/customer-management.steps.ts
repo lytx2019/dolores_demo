@@ -97,7 +97,7 @@ When('点击「保存」', function (this: CustomWorld) {
       throw new Error('No visit record form data to save');
     }
     
-    // 验证必填字段
+  // 验证必填字段
     const requiredFields = ['客户', '拜访日期', '客户阶段'];
     const missingFields = requiredFields.filter(field => 
       !this.crmState.visitRecordForm![field] || 
@@ -142,11 +142,11 @@ When('点击「保存」', function (this: CustomWorld) {
     const requiredFields = ['客户名称', '客户行业', '客户分层'];
     const missingFields = requiredFields.filter(field => 
       !this.crmState.customerFormData![field] || this.crmState.customerFormData![field].trim() === ''
-    );
-    
-    if (missingFields.length > 0) {
-      this.crmState.lastError = `${missingFields[0]}为必填项`;
-      this.crmState.saveResult = 'failed';
+  );
+  
+  if (missingFields.length > 0) {
+    this.crmState.lastError = `${missingFields[0]}为必填项`;
+    this.crmState.saveResult = 'failed';
       console.log('Validation failed:', this.crmState.lastError);
       return;
     }
@@ -190,19 +190,19 @@ When('点击「保存」', function (this: CustomWorld) {
       this.crmState.lastMessage = '修改成功';
     } else {
       // 新建客户
-      const newCustomer: Customer = {
-        id: `customer_${Date.now()}`,
+    const newCustomer: Customer = {
+      id: `customer_${Date.now()}`,
         客户名称: this.crmState.customerFormData['客户名称'],
         客户行业: this.crmState.customerFormData['客户行业'],
         客户分层: this.crmState.customerFormData['客户分层'],
         人员规模: this.crmState.customerFormData['人员规模'],
         国家地区: this.crmState.customerFormData['国家/地区'],
         官方网站: this.crmState.customerFormData['官方网站'],
-        创建时间: new Date(),
-        修改日志: []
-      };
-      this.crmState.customers.push(newCustomer);
-      this.crmState.lastMessage = '创建成功';
+      创建时间: new Date(),
+      修改日志: []
+    };
+    this.crmState.customers.push(newCustomer);
+    this.crmState.lastMessage = '创建成功';
     }
     
     this.crmState.saveResult = 'success';

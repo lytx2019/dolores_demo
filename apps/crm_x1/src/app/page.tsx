@@ -104,11 +104,11 @@ export default function Home() {
   }, []);
 
   const tabs = [
-    { id: 'customer', name: '客户管理', icon: '👥' },
-    { id: 'visit', name: '拜访记录', icon: '🤝' },
-    { id: 'opportunity', name: '商机管理', icon: '💼' },
-    { id: 'approval', name: '审批流程', icon: '✅' },
-    { id: 'analysis', name: '统计分析', icon: '📊' }
+    { id: 'customer', name: '客户管理', icon: '👥', color: 'blue' },
+    { id: 'visit', name: '拜访记录', icon: '🤝', color: 'green' },
+    { id: 'opportunity', name: '商机管理', icon: '💼', color: 'yellow' },
+    { id: 'approval', name: '审批流程', icon: '✅', color: 'purple' },
+    { id: 'analysis', name: '统计分析', icon: '📊', color: 'indigo' }
   ];
 
   const updateCRMState = (updates: Partial<CRMState>) => {
@@ -126,58 +126,82 @@ export default function Home() {
 
   if (!currentUser) {
     return (
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="text-lg">Loading...</div>
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="text-center">
+          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
+          <div className="mt-4 text-lg text-gray-600">Loading...</div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Modern Header with Glassmorphism Effect */}
+      <header className="sticky top-0 z-40 backdrop-blur-xl bg-white/80 shadow-lg border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <h1 className="text-xl font-semibold text-gray-900">CRM X1</h1>
-            </div>
             <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-gray-600">当前用户:</span>
-                <span className="text-sm font-medium text-gray-900">{currentUser.name}</span>
-                <span className={`text-xs px-2 py-1 rounded-full ${
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">C</span>
+                </div>
+                <h1 className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+                  CRM X1
+                </h1>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              {/* User Info Card */}
+              <div className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+                <div className="flex items-center space-x-2">
+                  <div className={`w-2 h-2 rounded-full ${
+                    currentUser.role === '管理者' ? 'bg-purple-500' : 'bg-blue-500'
+                  }`}></div>
+                  <span className="text-sm font-medium text-gray-700">{currentUser.name}</span>
+                </div>
+                <span className={`text-xs px-3 py-1 rounded-full font-medium ${
                   currentUser.role === '管理者' 
-                    ? 'bg-purple-100 text-purple-800' 
-                    : 'bg-blue-100 text-blue-800'
+                    ? 'bg-purple-100 text-purple-700 border border-purple-200' 
+                    : 'bg-blue-100 text-blue-700 border border-blue-200'
                 }`}>
                   {currentUser.role}
                 </span>
               </div>
+              
+              {/* Switch Role Button */}
               <button
                 onClick={switchUser}
-                className="text-sm px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
+                className="relative overflow-hidden px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 rounded-lg text-sm font-medium text-gray-700 transition-all duration-300 hover:shadow-md border border-gray-200/50"
               >
-                切换角色
+                <span className="relative z-10">切换角色</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700"></div>
               </button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Notifications */}
+      {/* Enhanced Notifications */}
       {crmState.notifications.length > 0 && (
-        <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <svg className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <p className="text-sm text-blue-700">
-                  {crmState.notifications[crmState.notifications.length - 1]}
-                </p>
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10"></div>
+          <div className="relative bg-white/70 backdrop-blur-sm border-l-4 border-blue-500 shadow-sm">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <div className="w-5 h-5 text-blue-500">
+                    <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="ml-3 flex-1">
+                  <p className="text-sm font-medium text-blue-800">
+                    {crmState.notifications[crmState.notifications.length - 1]}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -185,29 +209,51 @@ export default function Home() {
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Tab Navigation */}
-        <div className="bg-white rounded-lg shadow-sm">
-          <div className="border-b border-gray-200">
-            <nav className="-mb-px flex space-x-8">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`py-4 px-6 border-b-2 font-medium text-sm transition-colors ${
-                    activeTab === tab.id
-                      ? 'border-blue-500 text-blue-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                  }`}
-                >
-                  <span className="mr-2">{tab.icon}</span>
-                  {tab.name}
-                </button>
-              ))}
+        {/* Modern Tab Navigation with Glassmorphism */}
+        <div className="bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 overflow-hidden">
+          <div className="border-b border-gray-200/50">
+            <nav className="flex">
+              {tabs.map((tab, index) => {
+                const isActive = activeTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`relative flex-1 py-4 px-6 font-medium text-sm transition-all duration-300 ${
+                      isActive
+                        ? 'text-white'
+                        : 'text-gray-600 hover:text-gray-800 hover:bg-white/30'
+                    }`}
+                  >
+                    {/* Active Tab Background */}
+                    {isActive && (
+                      <div className={`absolute inset-0 bg-gradient-to-r ${
+                        tab.color === 'blue' ? 'from-blue-500 to-blue-600' :
+                        tab.color === 'green' ? 'from-green-500 to-green-600' :
+                        tab.color === 'yellow' ? 'from-yellow-500 to-orange-500' :
+                        tab.color === 'purple' ? 'from-purple-500 to-purple-600' :
+                        'from-indigo-500 to-indigo-600'
+                      } shadow-lg`}></div>
+                    )}
+                    
+                    {/* Tab Content */}
+                    <div className="relative z-10 flex items-center justify-center space-x-2">
+                      <span className="text-lg">{tab.icon}</span>
+                      <span>{tab.name}</span>
+                    </div>
+                    
+                    {/* Hover Effect */}
+                    {!isActive && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700"></div>
+                    )}
+                  </button>
+                );
+              })}
             </nav>
           </div>
 
-          {/* Tab Content */}
-          <div className="p-6">
+          {/* Tab Content with Enhanced Styling */}
+          <div className="p-8 min-h-[600px]">
             {activeTab === 'customer' && (
               <CustomerManagement 
                 currentUser={currentUser} 

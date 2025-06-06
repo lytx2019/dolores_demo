@@ -105,14 +105,14 @@ When('系统自动汇总数据', function (this: CustomWorld) {
 });
 
 Then('报表展示 {string} 内拜访数 {int}、转商机申请数 {int}、转化率 {int}%', function (this: CustomWorld, period: string, visitCount: number, applicationCount: number, conversionRate: number) {
-  expect(this.crmState.reportData).to.exist;
+    expect(this.crmState.reportData).to.exist;
   expect(this.crmState.reportData!.period).to.equal(period);
   
   // 验证统计数据
   expect(this.crmState.reportData!.visitCount).to.equal(visitCount);
   expect(this.crmState.reportData!.applicationCount).to.equal(applicationCount);
   expect(this.crmState.reportData!.conversionRate).to.equal(conversionRate);
-  
+    
   console.log(`Report shows ${period} visits: ${visitCount}, applications: ${applicationCount}, conversion rate: ${conversionRate}%`);
 });
 
