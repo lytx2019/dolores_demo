@@ -44,7 +44,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5745666
+              "duration": 5318665
             }
           },
           {
@@ -57,7 +57,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2514582
+              "duration": 2635624
             }
           },
           {
@@ -66,11 +66,11 @@
             "line": 14,
             "name": "登录用户为对应管理者",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:47"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:58"
             },
             "result": {
               "status": "passed",
-              "duration": 363917
+              "duration": 227750
             }
           },
           {
@@ -79,11 +79,11 @@
             "line": 15,
             "name": "点击「通过」",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:57"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 253624
+              "duration": 197125
             }
           },
           {
@@ -92,11 +92,11 @@
             "line": 16,
             "name": "商机申请状态更新为 \"已通过\"",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:97"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:108"
             },
             "result": {
               "status": "passed",
-              "duration": 1039417
+              "duration": 1288542
             }
           },
           {
@@ -105,11 +105,11 @@
             "line": 17,
             "name": "商机状态更新为 \"进行中\"",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:104"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:115"
             },
             "result": {
               "status": "passed",
-              "duration": 778875
+              "duration": 982499
             }
           },
           {
@@ -118,11 +118,11 @@
             "line": 18,
             "name": "通知申请人",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:116"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 365541
+              "duration": 420542
             }
           }
         ],
@@ -171,7 +171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 91750
+              "duration": 200541
             }
           },
           {
@@ -184,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 153082
+              "duration": 313000
             }
           },
           {
@@ -193,11 +193,11 @@
             "line": 22,
             "name": "输入驳回原因 \"信息不足\"",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:130"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:141"
             },
             "result": {
               "status": "passed",
-              "duration": 211791
+              "duration": 786541
             }
           },
           {
@@ -206,11 +206,11 @@
             "line": 23,
             "name": "点击「驳回」",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:135"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:146"
             },
             "result": {
               "status": "passed",
-              "duration": 26041
+              "duration": 521540
             }
           },
           {
@@ -219,12 +219,11 @@
             "line": 24,
             "name": "申请状态更新为 \"已驳回\"",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:163"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:174"
             },
             "result": {
-              "status": "failed",
-              "duration": 265042,
-              "error_message": "AssertionError\n    + expected - actual\n\n    -待审批\n    +已驳回\n\n    at CustomWorld.<anonymous> (/Users/bytedance/Projects/lytx2019/dolores_demo/apps/crm_x1/tests/step-definitions/approval-workflow.steps.ts:165:62)"
+              "status": "passed",
+              "duration": 702874
             }
           },
           {
@@ -233,11 +232,11 @@
             "line": 25,
             "name": "通知申请人包含驳回原因",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:170"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:181"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 261583
             }
           }
         ],
@@ -286,7 +285,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 159916
+              "duration": 259374
             }
           },
           {
@@ -295,11 +294,11 @@
             "line": 29,
             "name": "销售人员尝试审批商机申请",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:185"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:196"
             },
             "result": {
               "status": "passed",
-              "duration": 212915
+              "duration": 257041
             }
           },
           {
@@ -308,11 +307,11 @@
             "line": 30,
             "name": "点击「通过」",
             "match": {
-              "location": "tests/step-definitions/approval-workflow.steps.ts:57"
+              "location": "tests/step-definitions/approval-workflow.steps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 21124
+              "duration": 26041
             }
           },
           {
@@ -320,9 +319,12 @@
             "keyword": "Then ",
             "line": 31,
             "name": "系统提示 \"无审批权限\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:244"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 467083
             }
           }
         ],
@@ -411,7 +413,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 255540
+              "duration": 238832
             }
           },
           {
@@ -424,7 +426,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 127084
+              "duration": 230874
             }
           },
           {
@@ -437,7 +439,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 120207
+              "duration": 227041
             }
           },
           {
@@ -476,7 +478,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 925875
+              "duration": 761374
             }
           },
           {
@@ -484,9 +486,12 @@
             "keyword": "And ",
             "line": 22,
             "name": "点击「保存」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:92"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 321041
             }
           },
           {
@@ -494,9 +499,12 @@
             "keyword": "Then ",
             "line": 23,
             "name": "系统提示 \"创建成功\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:244"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 134541
             }
           },
           {
@@ -505,11 +513,11 @@
             "line": 24,
             "name": "客户列表出现 \"上海星辰科技\"",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:124"
+              "location": "tests/step-definitions/customer-management.steps.ts:264"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 480957
             }
           }
         ],
@@ -587,7 +595,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 94624
+              "duration": 89375
             }
           },
           {
@@ -595,9 +603,12 @@
             "keyword": "Given ",
             "line": 28,
             "name": "已存在客户 \"上海星辰科技\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:272"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 596499
             }
           },
           {
@@ -606,11 +617,11 @@
             "line": 29,
             "name": "销售人员将 \"官方网站\" 修改为 \"https://xing.com\"",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:153"
+              "location": "tests/step-definitions/customer-management.steps.ts:306"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 643249
             }
           },
           {
@@ -618,9 +629,12 @@
             "keyword": "And ",
             "line": 30,
             "name": "点击「保存」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:92"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 193500
             }
           },
           {
@@ -629,11 +643,11 @@
             "line": 31,
             "name": "\"官方网站\" 应显示为 \"https://xing.com\"",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:188"
+              "location": "tests/step-definitions/customer-management.steps.ts:326"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 469916
             }
           },
           {
@@ -642,11 +656,11 @@
             "line": 32,
             "name": "系统记录一条修改日志",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:195"
+              "location": "tests/step-definitions/customer-management.steps.ts:333"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 164000
             }
           }
         ],
@@ -724,7 +738,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 156374
+              "duration": 181959
             }
           },
           {
@@ -732,9 +746,12 @@
             "keyword": "Given ",
             "line": 28,
             "name": "已存在客户 \"华北数码集团\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:272"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 148375
             }
           },
           {
@@ -743,11 +760,11 @@
             "line": 29,
             "name": "销售人员将 \"客户分层\" 修改为 \"B\"",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:153"
+              "location": "tests/step-definitions/customer-management.steps.ts:306"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 51374
             }
           },
           {
@@ -755,9 +772,12 @@
             "keyword": "And ",
             "line": 30,
             "name": "点击「保存」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:92"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 44042
             }
           },
           {
@@ -766,11 +786,11 @@
             "line": 31,
             "name": "\"客户分层\" 应显示为 \"B\"",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:188"
+              "location": "tests/step-definitions/customer-management.steps.ts:326"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 46542
             }
           },
           {
@@ -779,11 +799,12 @@
             "line": 32,
             "name": "系统记录一条修改日志",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:195"
+              "location": "tests/step-definitions/customer-management.steps.ts:333"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "failed",
+              "duration": 124082,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -官方网站\n    +客户分层\n\n    at CustomWorld.<anonymous> (/Users/bytedance/Projects/lytx2019/dolores_demo/apps/crm_x1/tests/step-definitions/customer-management.steps.ts:339:28)"
             }
           }
         ],
@@ -861,7 +882,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 91166
+              "duration": 74041
             }
           },
           {
@@ -870,11 +891,11 @@
             "line": 41,
             "name": "销售人员点击「新建客户」",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:207"
+              "location": "tests/step-definitions/customer-management.steps.ts:345"
             },
             "result": {
               "status": "passed",
-              "duration": 203833
+              "duration": 162042
             }
           },
           {
@@ -883,11 +904,11 @@
             "line": 42,
             "name": "仅填写 \"客户行业=制造业\"",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:213"
+              "location": "tests/step-definitions/customer-management.steps.ts:351"
             },
             "result": {
               "status": "passed",
-              "duration": 491959
+              "duration": 331124
             }
           },
           {
@@ -895,9 +916,12 @@
             "keyword": "And ",
             "line": 43,
             "name": "点击「保存」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:92"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 38417
             }
           },
           {
@@ -905,9 +929,12 @@
             "keyword": "Then ",
             "line": 44,
             "name": "系统提示 \"客户名称为必填项\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:244"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 49208
             }
           },
           {
@@ -916,11 +943,11 @@
             "line": 45,
             "name": "不保存记录",
             "match": {
-              "location": "tests/step-definitions/customer-management.steps.ts:221"
+              "location": "tests/step-definitions/customer-management.steps.ts:359"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 119334
             }
           }
         ],
@@ -990,7 +1017,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 352499
+              "duration": 175333
             }
           },
           {
@@ -1003,7 +1030,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 185166
+              "duration": 119500
             }
           },
           {
@@ -1016,7 +1043,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 284874
+              "duration": 103000
             }
           },
           {
@@ -1029,7 +1056,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 412874
+              "duration": 274667
             }
           },
           {
@@ -1042,7 +1069,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 302415
+              "duration": 247999
             }
           },
           {
@@ -1055,7 +1082,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 275166
+              "duration": 238041
             }
           },
           {
@@ -1068,7 +1095,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 141957
+              "duration": 118875
             }
           },
           {
@@ -1081,7 +1108,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 327707
+              "duration": 288291
             }
           },
           {
@@ -1094,7 +1121,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 170000
+              "duration": 146792
             }
           }
         ],
@@ -1153,7 +1180,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 67209
+              "duration": 54374
             }
           },
           {
@@ -1166,7 +1193,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 637915
+              "duration": 498875
             }
           },
           {
@@ -1179,7 +1206,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 125000
+              "duration": 155499
             }
           },
           {
@@ -1192,7 +1219,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 296082
+              "duration": 335249
             }
           },
           {
@@ -1200,9 +1227,12 @@
             "keyword": "And ",
             "line": 28,
             "name": "点击「保存」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:92"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 42582
             }
           },
           {
@@ -1211,11 +1241,11 @@
             "line": 29,
             "name": "商机阶段应更新为 \"方案制定\"",
             "match": {
-              "location": "tests/step-definitions/opportunity-management.steps.ts:219"
+              "location": "tests/step-definitions/opportunity-management.steps.ts:205"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 324083
             }
           },
           {
@@ -1224,11 +1254,11 @@
             "line": 30,
             "name": "系统写入阶段变更历史",
             "match": {
-              "location": "tests/step-definitions/opportunity-management.steps.ts:226"
+              "location": "tests/step-definitions/opportunity-management.steps.ts:212"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 239041
             }
           }
         ],
@@ -1287,7 +1317,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 83499
+              "duration": 77666
             }
           },
           {
@@ -1300,7 +1330,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 199625
+              "duration": 174040
             }
           },
           {
@@ -1313,7 +1343,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30958
+              "duration": 30999
             }
           },
           {
@@ -1326,7 +1356,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 113791
+              "duration": 101040
             }
           },
           {
@@ -1334,9 +1364,12 @@
             "keyword": "And ",
             "line": 28,
             "name": "点击「保存」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:92"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 30166
             }
           },
           {
@@ -1345,11 +1378,11 @@
             "line": 29,
             "name": "商机阶段应更新为 \"合同谈判\"",
             "match": {
-              "location": "tests/step-definitions/opportunity-management.steps.ts:219"
+              "location": "tests/step-definitions/opportunity-management.steps.ts:205"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 113999
             }
           },
           {
@@ -1358,11 +1391,11 @@
             "line": 30,
             "name": "系统写入阶段变更历史",
             "match": {
-              "location": "tests/step-definitions/opportunity-management.steps.ts:226"
+              "location": "tests/step-definitions/opportunity-management.steps.ts:212"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 76833
             }
           }
         ],
@@ -1420,7 +1453,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 274082
+              "duration": 188167
             }
           },
           {
@@ -1433,7 +1466,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 150959
+              "duration": 121791
             }
           },
           {
@@ -1446,7 +1479,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 462458
+              "duration": 285832
             }
           },
           {
@@ -1459,7 +1492,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 526333
+              "duration": 326666
             }
           }
         ],
@@ -1506,7 +1539,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 92750
+              "duration": 43208
             }
           },
           {
@@ -1519,7 +1552,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 392790
+              "duration": 252874
             }
           },
           {
@@ -1532,7 +1565,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 173459
+              "duration": 118916
             }
           },
           {
@@ -1540,9 +1573,12 @@
             "keyword": "Then ",
             "line": 20,
             "name": "报表展示 \"本月\" 内拜访数 40、转商机申请数 8、转化率 20%",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:107"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 673458
             }
           }
         ],
@@ -1589,7 +1625,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 84666
+              "duration": 51790
             }
           },
           {
@@ -1602,7 +1638,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 156874
+              "duration": 105083
             }
           },
           {
@@ -1615,7 +1651,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 49792
+              "duration": 24707
             }
           },
           {
@@ -1623,9 +1659,12 @@
             "keyword": "Then ",
             "line": 20,
             "name": "报表展示 \"本季度\" 内拜访数 120、转商机申请数 30、转化率 25%",
+            "match": {
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:107"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 193915
             }
           }
         ],
@@ -1672,7 +1711,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 50540
+              "duration": 63042
             }
           },
           {
@@ -1681,11 +1720,11 @@
             "line": 29,
             "name": "销售人员进入「统计分析」",
             "match": {
-              "location": "tests/step-definitions/statistical-analysis.steps.ts:119"
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:120"
             },
             "result": {
               "status": "passed",
-              "duration": 168833
+              "duration": 158917
             }
           },
           {
@@ -1694,11 +1733,11 @@
             "line": 30,
             "name": "报表加载完成",
             "match": {
-              "location": "tests/step-definitions/statistical-analysis.steps.ts:132"
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:133"
             },
             "result": {
               "status": "passed",
-              "duration": 130291
+              "duration": 112999
             }
           },
           {
@@ -1707,11 +1746,11 @@
             "line": 31,
             "name": "仅展示该销售人员相关的数据指标",
             "match": {
-              "location": "tests/step-definitions/statistical-analysis.steps.ts:156"
+              "location": "tests/step-definitions/statistical-analysis.steps.ts:157"
             },
             "result": {
               "status": "passed",
-              "duration": 222457
+              "duration": 203790
             }
           }
         ],
@@ -1782,11 +1821,11 @@
             "line": 5,
             "name": "系统已定义「拜访记录字段配置表」:",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:24"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 226708
+              "duration": 148333
             }
           },
           {
@@ -1794,9 +1833,12 @@
             "keyword": "Given ",
             "line": 14,
             "name": "已存在客户 \"上海星辰科技\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:272"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 47334
             }
           },
           {
@@ -1805,11 +1847,11 @@
             "line": 15,
             "name": "销售人员点击「新建拜访记录」",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:56"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:51"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 109959
             }
           },
           {
@@ -1818,11 +1860,11 @@
             "line": 16,
             "name": "选择客户 \"上海星辰科技\"",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:62"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:57"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 245957
             }
           },
           {
@@ -1831,11 +1873,11 @@
             "line": 17,
             "name": "选择日期 \"2025-06-10\"",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:68"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:63"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 212334
             }
           },
           {
@@ -1844,11 +1886,11 @@
             "line": 18,
             "name": "选择客户阶段 \"需求确认\"",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:74"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:69"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 238041
             }
           },
           {
@@ -1856,9 +1898,12 @@
             "keyword": "And ",
             "line": 19,
             "name": "点击「保存」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:92"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 174541
             }
           },
           {
@@ -1867,11 +1912,11 @@
             "line": 20,
             "name": "系统生成拜访记录",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:117"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:75"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 158374
             }
           },
           {
@@ -1880,11 +1925,11 @@
             "line": 21,
             "name": "拜访记录关联客户 \"上海星辰科技\"",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:131"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:89"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 261957
             }
           }
         ],
@@ -1944,11 +1989,11 @@
             "line": 5,
             "name": "系统已定义「拜访记录字段配置表」:",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:24"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 82165
+              "duration": 54958
             }
           },
           {
@@ -1956,9 +2001,12 @@
             "keyword": "Given ",
             "line": 14,
             "name": "已存在客户 \"华北数码集团\"",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:272"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 40124
             }
           },
           {
@@ -1967,11 +2015,11 @@
             "line": 15,
             "name": "销售人员点击「新建拜访记录」",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:56"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:51"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 22874
             }
           },
           {
@@ -1980,11 +2028,11 @@
             "line": 16,
             "name": "选择客户 \"华北数码集团\"",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:62"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:57"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 117125
             }
           },
           {
@@ -1993,11 +2041,11 @@
             "line": 17,
             "name": "选择日期 \"2025-06-11\"",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:68"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:63"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 96791
             }
           },
           {
@@ -2006,11 +2054,11 @@
             "line": 18,
             "name": "选择客户阶段 \"意向培养\"",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:74"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:69"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 100334
             }
           },
           {
@@ -2018,9 +2066,12 @@
             "keyword": "And ",
             "line": 19,
             "name": "点击「保存」",
+            "match": {
+              "location": "tests/step-definitions/customer-management.steps.ts:92"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 74166
             }
           },
           {
@@ -2029,11 +2080,11 @@
             "line": 20,
             "name": "系统生成拜访记录",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:117"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:75"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 73375
             }
           },
           {
@@ -2042,11 +2093,11 @@
             "line": 21,
             "name": "拜访记录关联客户 \"华北数码集团\"",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:131"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:89"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 107125
             }
           }
         ],
@@ -2106,11 +2157,11 @@
             "line": 5,
             "name": "系统已定义「拜访记录字段配置表」:",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:24"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 102582
+              "duration": 57750
             }
           },
           {
@@ -2119,11 +2170,11 @@
             "line": 30,
             "name": "管理者进入「拜访记录」页面",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:143"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:101"
             },
             "result": {
               "status": "passed",
-              "duration": 267792
+              "duration": 158124
             }
           },
           {
@@ -2132,11 +2183,11 @@
             "line": 31,
             "name": "页面加载完成",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:156"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:114"
             },
             "result": {
               "status": "passed",
-              "duration": 252624
+              "duration": 111416
             }
           },
           {
@@ -2145,11 +2196,11 @@
             "line": 32,
             "name": "系统展示全员拜访记录列表",
             "match": {
-              "location": "tests/step-definitions/visit-record-management.steps.ts:173"
+              "location": "tests/step-definitions/visit-record-management.steps.ts:131"
             },
             "result": {
               "status": "passed",
-              "duration": 446750
+              "duration": 316166
             }
           }
         ],

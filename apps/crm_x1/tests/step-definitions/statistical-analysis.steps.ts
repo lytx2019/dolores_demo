@@ -74,46 +74,47 @@ Given('统计周期为 {string}', function (this: CustomWorld, period: string) {
 });
 
 When('系统自动汇总数据', function (this: CustomWorld) {
-  const period = this.crmState.statisticalPeriod;
+  // 模拟数据汇总过程
+  const period = this.crmState.statisticalPeriod || '本月';
   
-  // 模拟数据汇总
-  let visitCount = 0;
-  let applicationCount = 0;
-  let conversionRate = '';
+  // 根据周期生成模拟数据
+  let visitCount: number;
+  let applicationCount: number;
   
   if (period === '本月') {
     visitCount = 40;
     applicationCount = 8;
-    conversionRate = '20%';
   } else if (period === '本季度') {
     visitCount = 120;
     applicationCount = 30;
-    conversionRate = '25%';
+  } else {
+    visitCount = 0;
+    applicationCount = 0;
   }
   
+  const conversionRate = visitCount > 0 ? Math.round((applicationCount / visitCount) * 100) : 0;
+  
   this.crmState.reportData = {
-    周期: period,
-    拜访数: visitCount,
-    申请数: applicationCount,
-    转化率: conversionRate
+    period: period,
+    visitCount: visitCount,
+    applicationCount: applicationCount,
+    conversionRate: conversionRate
   };
   
   console.log('Data aggregation completed for period:', period);
 });
 
-Then('报表展示 {string} 内拜访数 {int}、转商机申请数 {int}、转化率 {string}', 
-  function (this: CustomWorld, period: string, expectedVisits: number, expectedApplications: number, expectedRate: string) {
-    expect(this.crmState.reportData).to.exist;
-    
-    const reportData = this.crmState.reportData || {};
-    expect(reportData['周期']).to.equal(period);
-    expect(reportData['拜访数']).to.equal(expectedVisits);
-    expect(reportData['申请数']).to.equal(expectedApplications);
-    expect(reportData['转化率']).to.equal(expectedRate);
-    
-    console.log('Conversion rate report verified:', period, expectedVisits, expectedApplications, expectedRate);
-  }
-);
+Then('报表展示 {string} 内拜访数 {int}、转商机申请数 {int}、转化率 {int}%', function (this: CustomWorld, period: string, visitCount: number, applicationCount: number, conversionRate: number) {
+  expect(this.crmState.reportData).to.exist;
+  expect(this.crmState.reportData!.period).to.equal(period);
+  
+  // 验证统计数据
+  expect(this.crmState.reportData!.visitCount).to.equal(visitCount);
+  expect(this.crmState.reportData!.applicationCount).to.equal(applicationCount);
+  expect(this.crmState.reportData!.conversionRate).to.equal(conversionRate);
+  
+  console.log(`Report shows ${period} visits: ${visitCount}, applications: ${applicationCount}, conversion rate: ${conversionRate}%`);
+});
 
 // Rule: 数据权限
 Given('销售人员进入「统计分析」', function (this: CustomWorld) {

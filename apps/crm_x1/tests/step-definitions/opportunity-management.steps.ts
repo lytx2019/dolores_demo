@@ -192,28 +192,14 @@ When('将阶段修改为 {string}', function (this: CustomWorld, newStage: strin
     throw new Error('No current opportunity selected');
   }
   
+  // 设置商机管理上下文
+  this.crmState.currentScreen = 'opportunity_stage_edit';
+  this.crmState.newOpportunityStage = newStage;
+  
   const oldStage = this.crmState.currentOpportunity.当前阶段;
-  this.crmState.currentOpportunity.当前阶段 = newStage;
-  
-  // 记录阶段变更历史
-  this.crmState.currentOpportunity.阶段变更历史 = this.crmState.currentOpportunity.阶段变更历史 || [];
-  this.crmState.currentOpportunity.阶段变更历史.push({
-    原阶段: oldStage,
-    新阶段: newStage,
-    变更时间: new Date()
-  });
-  
   this.crmState.lastStageChange = { oldStage, newStage };
-  console.log('Opportunity stage changed from', oldStage, 'to', newStage);
-});
-
-// 重用客户管理中的"点击「保存」"步骤
-When('点击「保存」', function (this: CustomWorld) {
-  // 对于商机管理，保存操作总是成功的
-  this.crmState.saveResult = 'success';
-  this.crmState.lastMessage = '保存成功';
   
-  console.log('Opportunity stage change saved');
+  console.log('Opportunity stage change prepared from', oldStage, 'to', newStage);
 });
 
 Then('商机阶段应更新为 {string}', function (this: CustomWorld, expectedStage: string) {
@@ -231,7 +217,7 @@ Then('系统写入阶段变更历史', function (this: CustomWorld) {
     this.crmState.currentOpportunity.阶段变更历史.length - 1
   ];
   expect(latestChange).to.exist;
-  expect(latestChange?.新阶段).to.equal(this.crmState.lastStageChange?.newStage);
+  expect(latestChange?.新阶段).to.equal(this.crmState.newOpportunityStage);
   
   console.log('Stage change history recorded');
 }); 

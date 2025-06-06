@@ -41,6 +41,17 @@ Given('商机申请 {string} 状态为 {string}', function (this: CustomWorld, a
   }
   
   this.crmState.currentOpportunityApplication = application;
+  
+  // 如果没有设置用户，默认设置为管理者（除非是权限测试场景）
+  if (!this.crmState.currentUser) {
+    this.crmState.currentUser = {
+      id: 'manager_001',
+      name: '李管理',
+      role: '管理者',
+      isLoggedIn: true
+    };
+  }
+  
   console.log('Opportunity application exists:', applicationCode, 'status:', currentStatus);
 });
 
@@ -157,7 +168,7 @@ When('点击「驳回」', function (this: CustomWorld) {
   );
   
   this.crmState.approvalResult = 'success';
-  console.log('Opportunity application rejected');
+  console.log('Opportunity application rejected with reason:', this.crmState.rejectionReason);
 });
 
 Then('申请状态更新为 {string}', function (this: CustomWorld, expectedStatus: string) {
@@ -213,7 +224,8 @@ Given('销售人员尝试审批商机申请', function (this: CustomWorld) {
 
 // 重用上面的"点击「通过」"步骤
 
-Then('系统提示 {string}', function (this: CustomWorld, expectedMessage: string) {
+// 使用通用的"系统提示"步骤，但添加兼容性检查
+Then('系统提示审批权限错误 {string}', function (this: CustomWorld, expectedMessage: string) {
   expect(this.crmState.lastError).to.equal(expectedMessage);
   expect(this.crmState.approvalResult).to.equal('failed');
   

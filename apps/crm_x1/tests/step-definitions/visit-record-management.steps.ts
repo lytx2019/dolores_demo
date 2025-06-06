@@ -9,16 +9,7 @@ interface VisitRecordFieldConfig {
   是否必填: string;
 }
 
-// 拜访记录数据接口
-interface VisitRecord {
-  id?: string;
-  客户: string;
-  拜访日期: string;
-  客户阶段: string;
-  详细沟通记录?: string;
-  销售人员: string;
-  创建时间?: Date;
-}
+// Use the VisitRecord interface from world.ts (拜访日期 is string there)
 
 // Background - 拜访记录字段配置表
 Given('系统已定义「拜访记录字段配置表」:', function (this: CustomWorld, dataTable: DataTable) {
@@ -34,23 +25,27 @@ Given('系统已定义「拜访记录字段配置表」:', function (this: Custo
 });
 
 // Rule: 创建拜访
-Given('已存在客户 {string}', function (this: CustomWorld, customerName: string) {
-  // 确保客户存在
+Given('拜访记录中已存在客户 {string}', function (this: CustomWorld, customerName: string) {
   this.crmState.customers = this.crmState.customers || [];
   
-  let customer = this.crmState.customers.find((c: any) => c.客户名称 === customerName);
+  // 检查客户是否已存在
+  let customer = this.crmState.customers.find(c => c.客户名称 === customerName);
   if (!customer) {
-    customer = {
+    const newCustomer = {
       id: `customer_${Date.now()}`,
       客户名称: customerName,
       客户行业: '软件',
       客户分层: 'A',
-      创建时间: new Date()
+      人员规模: '100-500人',
+      国家地区: '中国',
+      官方网站: 'https://example.com',
+      创建时间: new Date(),
+      修改日志: []
     };
-    this.crmState.customers.push(customer);
+    this.crmState.customers.push(newCustomer);
   }
   
-  console.log('Customer exists:', customerName);
+  console.log('Customer exists for visit records:', customerName);
 });
 
 When('销售人员点击「新建拜访记录」', function (this: CustomWorld) {
@@ -75,43 +70,6 @@ When('选择客户阶段 {string}', function (this: CustomWorld, customerStage: 
   this.crmState.visitRecordForm = this.crmState.visitRecordForm || {};
   this.crmState.visitRecordForm['客户阶段'] = customerStage;
   console.log('Selected customer stage:', customerStage);
-});
-
-// 重用客户管理中的"点击「保存」"步骤，但针对拜访记录
-When('点击「保存」', function (this: CustomWorld) {
-  // 验证必填字段
-  const requiredFields = this.crmState.visitRecordFieldConfigs
-    ?.filter((config: VisitRecordFieldConfig) => config.是否必填 === '是')
-    .map((config: VisitRecordFieldConfig) => config.字段) || [];
-  
-  const visitRecordForm = this.crmState.visitRecordForm || {};
-  const missingFields = requiredFields.filter((field: string) => 
-    !visitRecordForm[field] || 
-    visitRecordForm[field].trim() === ''
-  );
-  
-  if (missingFields.length > 0) {
-    this.crmState.lastError = `${missingFields[0]}为必填项`;
-    this.crmState.saveResult = 'failed';
-  } else {
-    // 保存拜访记录
-    const newVisitRecord: VisitRecord = {
-      id: `visit_${Date.now()}`,
-      客户: visitRecordForm['客户'],
-      拜访日期: visitRecordForm['拜访日期'],
-      客户阶段: visitRecordForm['客户阶段'],
-      详细沟通记录: visitRecordForm['详细沟通记录'],
-      销售人员: this.crmState.currentUser?.name || '未知销售人员',
-      创建时间: new Date()
-    };
-    
-    this.crmState.visitRecords = this.crmState.visitRecords || [];
-    this.crmState.visitRecords.push(newVisitRecord);
-    this.crmState.lastMessage = '保存成功';
-    this.crmState.saveResult = 'success';
-  }
-  
-  console.log('Save visit record attempted, result:', this.crmState.saveResult);
 });
 
 Then('系统生成拜访记录', function (this: CustomWorld) {
@@ -163,7 +121,7 @@ When('页面加载完成', function (this: CustomWorld) {
   } else {
     // 如果是销售人员，只显示自己的记录
     this.crmState.displayedVisitRecords = this.crmState.visitRecords?.filter(
-      (record: VisitRecord) => record.销售人员 === this.crmState.currentUser?.name
+      (record: any) => record.销售人员 === this.crmState.currentUser?.name
     ) || [];
   }
   
