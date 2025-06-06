@@ -347,6 +347,11 @@
       "reviewCategory": "production"
     },
     {
+      "packageName": "crm_x1",
+      "projectFolder": "apps/crm_x1",
+      "reviewCategory": "production"
+    },
+    {
       "packageName": "@dolores/ui-components",
       "projectFolder": "packages/ui-components",
       "reviewCategory": "production"

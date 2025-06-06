@@ -8,6 +8,67 @@ importers:
 
   .: {}
 
+  ../../apps/crm_x1:
+    dependencies:
+      '@dolores/ui-components':
+        specifier: workspace:*
+        version: link:../../packages/ui-components
+      next:
+        specifier: 13.5.6
+        version: 13.5.6(react-dom@18.3.1)(react@18.3.1)
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@cucumber/cucumber':
+        specifier: ^10.3.1
+        version: 10.9.0
+      '@cucumber/messages':
+        specifier: ^24.1.0
+        version: 24.1.0
+      '@cucumber/pretty-formatter':
+        specifier: ^1.0.1
+        version: 1.0.1(@cucumber/cucumber@10.9.0)(@cucumber/messages@24.1.0)
+      '@types/chai':
+        specifier: ^4.3.11
+        version: 4.3.20
+      '@types/node':
+        specifier: ^18
+        version: 18.19.110
+      '@types/react':
+        specifier: ^18
+        version: 18.3.23
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.3.7(@types/react@18.3.23)
+      chai:
+        specifier: ^4.3.10
+        version: 4.5.0
+      cucumber-html-reporter:
+        specifier: ^7.1.1
+        version: 7.2.0
+      eslint:
+        specifier: ^8
+        version: 8.57.1
+      eslint-config-next:
+        specifier: 13.5.6
+        version: 13.5.6(eslint@8.57.1)(typescript@5.8.3)
+      postcss:
+        specifier: ^8
+        version: 8.5.4
+      tailwindcss:
+        specifier: ^3.4.0
+        version: 3.4.17(ts-node@10.9.2)
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@18.19.110)(typescript@5.8.3)
+      typescript:
+        specifier: ^5
+        version: 5.8.3
+
   ../../apps/hello-world:
     dependencies:
       '@dolores/ui-components':
