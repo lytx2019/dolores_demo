@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "TS_NODE_PROJECT=tests/tsconfig.json cucumber-js",
+    "test:watch": "TS_NODE_PROJECT=tests/tsconfig.json cucumber-js --watch",
+    "test:report": "TS_NODE_PROJECT=tests/tsconfig.json cucumber-js && npm run generate-report",
+    "test:report:open": "npm run test:report && open reports/cucumber-report.html",
+    "generate-report": "node scripts/generate-html-report.js",
+    "open-report": "open reports/cucumber-report.html || xdg-open reports/cucumber-report.html || start reports/cucumber-report.html"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -22,6 +28,13 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.0",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6"
+    "eslint-config-next": "13.5.6",
+    "@cucumber/cucumber": "^10.3.1",
+    "@cucumber/messages": "^24.1.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "chai": "^4.3.10",
+    "@types/chai": "^4.3.11",
+    "ts-node": "^10.9.2",
+    "cucumber-html-reporter": "^7.1.1"
   }
 } 
